@@ -1,0 +1,6 @@
+#! intEntrevue, lngNoCompteVisiteur, intNombreDeDosesRecu, strDate, enumTypeVaccin, strNoAssuranceMaladie, strSymptomes, strAllergies, blnDejaEuCovid
+45,216479034767,0,2021-12-25,PFIZER,DFHG06170647,[],[],true
+67,217421051784,2,2024-10-15,MODERNA,GRBL25703459,[mal de gorge; fievre; toux], [arachides; oeufs; soleil], false
+36,123456789012,1,2021-11-11,ASTRAZENECA,GAOE31970348,[],[],false
+20,102460187016,1,2021-11-12,ASTRAZENECA,GAOE31970348,,,true
+25,102460187016,2,2021-11-11,ASTRAZENECA,GAOE31970348,,[],true

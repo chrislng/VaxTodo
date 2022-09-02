@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- <?import java.net.*?> -->
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.web.WebView?>
+<?import VaxTodo.Views.Interface.Models.*?>
+
+<!-- <?import javafx.scene.web.WebView?> -->
+<!-- <?import javafx.*.*?> -->
+<!-- Main Borderpane start -->
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="VaxTodo.Controllers.ControllerLogin">
+            <!--! fx:controller="com.login.login.HelloController"-->
+
+    <!-- Beginning of the left part of the Borderpane -->
+    <left>
+
+        <!-- An AnchorPane in the Left BorderPane -->
+        <AnchorPane prefHeight="700.0" prefWidth="400.0" styleClass="anchorPaneLeft" BorderPane.alignment="CENTER">
+            <children>
+                <!-- Logo -->
+                <ImageView fitHeight="380.0" fitWidth="380.0" layoutY="180.0" pickOnBounds="true" preserveRatio="true">
+                           <!--! fitHeight="400com.login.login.HelloController.0"-->
+                    <image>
+                        <Image url="@/VaxTodo/images/VaxTodo-handmaid-logo-v2.png" />
+                        <!-- @/VaxTodo/images/logo_v2.png -->
+                    </image>
+                </ImageView>
+                <Line endX="106.0" endY="300.0" layoutX="275.0" layoutY="380" startX="106.0" startY="-380.0" styleClass="lineSeparatorVertical" />
+            </children>
+        </AnchorPane>
+    </left>
+    <!-- Ending of the left part of the Borderpane -->
+
+    <!-- Beginning of the right part of the Borderpane -->
+    <right>
+        <AnchorPane prefHeight="700.0" prefWidth="600.0" styleClass="anchorPaneRight" BorderPane.alignment="CENTER">
+            <children>
+
+                <Button fx:id="btnQuit" layoutX="515.0" layoutY="13.0" mnemonicParsing="false" onAction="#btnQuitClick" styleClass="btnDisconnect" text="Quitter">
+                    <!-- <font>
+                        <Font size="15.0"/>
+                    </font> -->
+                </Button>
+                <!-- The End of Logo -->
+
+                      <!-- The Beginning of Employe Login form -->
+                <Label layoutX="244.0" layoutY="60.0" prefHeight="30.0" prefWidth="190.0" styleClass="lblTitleLoginUser" text="Employé">
+                    <!-- <font>
+                        <Font name="SansSerif Regular" size="30.0"/>
+                    </font> -->
+                </Label>
+
+                <ImageView fitHeight="40.0" fitWidth="35.0" layoutX="110.0" layoutY="100.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@/VaxTodo/images/enter-numpad-icon-colorized.png" />
+                    </image>
+                </ImageView>
+
+                <MaskedTextField fx:id="txtFieldEmploye" layoutX="150.0" layoutY="100.0" onAction="#btnActionEnterEmploye" prefHeight="30.0" prefWidth="300.0" promptText="Code d'identification" styleClass="txtField">
+                    <!-- <font>
+                        <Font name="SansSerif Regular" size="14.0"/>
+                    </font> -->
+                    <!-- <cursor>
+                        <Cursor fx:constant="TEXT"/>
+                    </cursor> -->
+                </MaskedTextField>
+
+                <ImageView fitHeight="40.0" fitWidth="35.0" layoutX="110.0" layoutY="140.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@/VaxTodo/images/lock-colorized.png" />
+                    </image>
+                </ImageView>
+
+                <PasswordField fx:id="passwdFieldEmploye" layoutX="150.0" layoutY="140.0" onAction="#btnActionEnterEmploye" prefHeight="30.0" prefWidth="250.0" promptText="Mot de passe" styleClass="txtField">
+                    <!-- <font>
+                        <Font name="SansSerif Regular" size="14.0"/>
+                    </font> -->
+                </PasswordField>
+
+                <TextField fx:id="txtFieldPasswdEmploye" layoutX="150.0" layoutY="140.0" onAction="#btnActionEnterEmploye" prefHeight="30.0" prefWidth="250.0" promptText="Mot de passe" styleClass="txtField">
+                    <!-- <font>
+                        <Font name="SansSerif Regular" size="14.0"/>
+                    </font> -->
+                </TextField>
+
+                <ImageView fx:id="viewTogglePasswdEmploye" fitHeight="40.0" fitWidth="35.0" layoutX="410.0" layoutY="140.0" onMouseClicked="#btnTogglePasswdEmployeClick" pickOnBounds="true" preserveRatio="true" styleClass="btnTogglePasswd"> 
+                           <!-- styleClass="btnTogglePasswd" -->
+                    <image>
+                        <Image url="@/VaxTodo/images/eye-closed-colorized.png" />
+                    </image>
+                </ImageView>
+
+                      <!-- <CheckBox layoutX="150.0" layoutY="195.0" mnemonicParsing="false" style="-fx-text-fill: #A9A9A9;"
+                          text="Se Souvenir">
+                          <font>
+                              <Font name="SansSerif Regular" size="15.0"/>
+                          </font>
+                      </CheckBox> -->
+
+                <Label fx:id="lblInvalidEmploye" alignment="CENTER" contentDisplay="CENTER" layoutX="150.0" layoutY="175.0" prefHeight="16.0" prefWidth="300.0" textAlignment="CENTER" textFill="RED">
+                    <!--! <opaqueInsets>
+                        <Insets/>
+                    </opaqueInsets> -->
+                </Label>
+
+                <Button fx:id="btnLoginEmploye" layoutX="335.0" layoutY="195.0" mnemonicParsing="false" onAction="#btnLoginEmployeClick" styleClass="btnLogin" text="Connexion">
+                    <!-- <font>
+                        <Font size="15.0"/>
+                    </font> -->
+                </Button>
+
+                <Button fx:id="btnForgotPassWD" layoutX="190.0" layoutY="235.0" mnemonicParsing="false" onAction="#btnForgotPasswdClick" styleClass="btnForgotPasswd" text="Mot de passe oublié ?" underline="true">
+                    <!-- <font>
+                        <Font size="15.0"/>
+                    </font> -->
+                </Button>
+                <!-- End of Employe Login Form -->
+
+                      <!-- A simple line Separator -->
+                <Line endX="500.0" endY="400.0" layoutY="-110.0" startX="100.0" startY="400.0" styleClass="lineSeparatorHorizontal">
+                    
+                    <!-- <padding>
+                        <Insets top="10" right="0" bottom="10" left="0"/>
+                    </padding> -->
+                </Line>
+
+                      <!-- The Beginning of Benevole Login Form -->
+                <Label layoutX="230.0" layoutY="315.0" prefHeight="36.0" prefWidth="230.0" styleClass="lblTitleLoginUser" text="Bénévole">
+                    <!-- <font>
+                        <Font name="SansSerif Regular" size="30.0"/>
+                    </font> -->
+                </Label>
+
+                <ImageView fitHeight="40.0" fitWidth="35.0" layoutX="110.0" layoutY="355.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@/VaxTodo/images/enter-numpad-icon-colorized.png" />
+                    </image>
+                </ImageView>
+
+                <MaskedTextField fx:id="txtFieldBenevole" layoutX="155.0" layoutY="355.0" onAction="#btnActionEnterBenevole" prefHeight="30.0" prefWidth="300.0" promptText="Code d'identification" styleClass="txtField">
+                    <!-- <font>
+                        <Font name="SansSerif Regular" size="14.0"/>
+                    </font> -->
+                    <!-- <cursor>
+                        <Cursor fx:constant="TEXT"/>
+                    </cursor> -->
+                </MaskedTextField>
+
+                <ImageView fitHeight="40.0" fitWidth="35.0" layoutX="110.0" layoutY="395.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@/VaxTodo/images/lock-colorized.png" />
+                    </image>
+                </ImageView>
+
+                <PasswordField fx:id="passwdFieldBenevole" layoutX="155.0" layoutY="395.0" onAction="#btnActionEnterBenevole" prefHeight="30.0" prefWidth="250.0" promptText="Mot de passe" styleClass="txtField">
+                    <!-- <font>
+                        <Font name="SansSerif Regular" size="14.0"/>
+                    </font> -->
+                </PasswordField>
+
+                <TextField fx:id="txtFieldPasswdBenevole" layoutX="150.0" layoutY="395.0" onAction="#btnActionEnterBenevole" prefHeight="30.0" prefWidth="250.0" promptText="Mot de passe" styleClass="txtField">
+                    <!-- <font>
+                        <Font name="SansSerif Regular" size="14.0"/>
+                    </font> -->
+                </TextField>
+
+                <ImageView fx:id="viewTogglePasswdBenevole" fitHeight="40.0" fitWidth="35.0" layoutX="410.0" layoutY="395.0" onMouseClicked="#btnTogglePasswdBenevoleClick" pickOnBounds="true" preserveRatio="true" styleClass="btnTogglePasswd"> 
+                           <!-- styleClass="btnTogglePasswd" -->
+                    <image>
+                        <Image url="@/VaxTodo/images/eye-closed-colorized.png" />
+                    </image>
+                </ImageView>
+
+                <Label fx:id="lblInvalidBenevole" alignment="CENTER" contentDisplay="CENTER" layoutX="150.0" layoutY="430.0" prefHeight="16.0" prefWidth="300.0" textAlignment="CENTER" textFill="RED">
+                    <!--! <opaqueInsets>
+                        <Insets/>
+                    </opaqueInsets> -->
+                </Label>
+
+                <Button fx:id="btnLoginBenevole" layoutX="335.0" layoutY="450.0" mnemonicParsing="false" onAction="#btnLoginBenevoleClick" styleClass="btnLogin" text="Connexion">
+                    <!-- <font>
+                        <Font size="15.0"/>
+                    </font> -->
+                </Button>
+
+                <Button fx:id="btnForgotPassWD" layoutX="190.0" layoutY="490.0" mnemonicParsing="false" onAction="#btnForgotPasswdClick" styleClass="btnForgotPasswd" text="Mot de passe oublié ?" underline="true">
+                    <!-- <font>
+                        <Font size="15.0"/>
+                    </font> -->
+                </Button>
+                
+                <WebView fx:id="webView" layoutX="92.0" prefHeight="56.0" prefWidth="414.0" />
+                <!-- End of Benevole Login Form -->
+            </children>
+        </AnchorPane>
+    </right>
+    <!-- Ending of the left part of the Borderpane -->
+
+    <!-- Beginning of the bottom part of the Borderpane -->
+    <bottom>
+
+        <!-- Simple Copyright -->
+        <Label fx:id="lblCopyright" alignment="CENTER" prefHeight="20.0" prefWidth="1000.0" styleClass="lblCopyright" text="VaxTodo © 2021 Mohamed, Christian, Louis" textAlignment="CENTER" BorderPane.alignment="CENTER" />
+    </bottom>
+    <!-- Ending of the left part of the Borderpane -->
+
+</BorderPane>

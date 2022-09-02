@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- <?import java.net.*?> -->
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<!-- <?import javafx.*.*?> -->
+
+<!-- Main Borderpane start -->
+
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+            prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/11.0.2"
+            fx:controller="VaxTodo.Controllers.ControllerLogin_Test"
+            >
+            <!--! fx:controller="com.login.login.HelloController"-->
+
+    <!-- Beginning of the left part of the Borderpane -->
+    <left>
+
+        <!-- An AnchorPane in the Left BorderPane -->
+        <AnchorPane prefHeight="700.0" prefWidth="400.0" style="-fx-background-color: #A9A9A9;"
+                    BorderPane.alignment="CENTER">
+            <children>
+
+                <!-- Logo -->
+                <ImageView fitHeight="400.0" fitWidth="400.0" layoutY="180.0"
+                           pickOnBounds="true" preserveRatio="true">
+                           <!--! fitHeight="400com.login.login.HelloController.0"-->
+                    <image>
+                        <Image url="@/VaxTodo/images/logo_v2.png"/>
+                    </image>
+                </ImageView>
+            </children>
+        </AnchorPane>
+    </left>
+    <!-- Ending of the left part of the Borderpane -->
+
+    <!-- Beginning of the right part of the Borderpane -->
+    <right>
+        <AnchorPane prefHeight="700.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+            <children>
+
+                <!-- The Beginning of Logo -->
+                <ImageView fitHeight="40.0" fitWidth="35.0" layoutX="165.0" layoutY="15.0" pickOnBounds="true"
+                           preserveRatio="true">
+                    <!-- itHeight="57.0" fitWidth="101.0" layoutX="150.0" layoutY="6.0" pickOnBounds="true"
+                           preserveRatio="true" -->
+                    <image>
+                        <!--<Image url="@/VaxTodo/images/cart.png"/>-->
+                        <Image url="@/VaxTodo/images/fingerprint.png"/>
+                    </image>
+                </ImageView>
+
+                <Label layoutX="203.0" layoutY="1.0" prefHeight="57.0" prefWidth="263.0"
+                           style="-fx-background-color: transparent; -fx-text-fill: #083B66;" text="S'identifier">
+                           <!-- -fx-text-fill: #24a0ed -->
+                    <font>
+                        <Font name="SansSerif Regular" size="25.0"/>
+                    </font>
+                </Label>
+                <!-- The End of Logo -->
+
+                <!-- The Beginning of Employe Login form -->
+                <Label layoutX="244.0" layoutY="60.0" prefHeight="30.0" prefWidth="190.0" style="-fx-text-fill: #A9A9A9;"
+                       text="Employé">
+                    <font>
+                        <Font name="SansSerif Regular" size="30.0"/>
+                    </font>
+                </Label>
+
+                <!--!<Button fx:id="cancelButton" layoutX="502.0" layoutY="13.0" mnemonicParsing="false"
+                        onAction="#onCancelButtonClick"
+                        style="-fx-background-color: transparent; -fx-text-fill: #A9A9A9; -fx-border-width: 2; -fx-border-color: #A9A9A9; -fx-border-radius: 5;"
+                        text="Quit App">
+                    <font>
+                        <Font size="15.0"/>
+                    </font>
+                </Button>-->
+
+                <TextField fx:id="textFieldEmploye" layoutX="150.0" layoutY="100.0" prefHeight="30.0"
+                           prefWidth="300.0" promptText="Code d'identification"
+                           style="-fx-border-width: 2; -fx-border-color: #A9A9A9; -fx-border-radius: 5;">
+                    <font>
+                        <Font name="SansSerif Regular" size="14.0"/>
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="TEXT"/>
+                    </cursor>
+                </TextField>
+
+                <ImageView fitHeight="40.0" fitWidth="35.0" layoutX="110.0" layoutY="100.0" pickOnBounds="true"
+                           preserveRatio="true">
+                    <image>
+                        <Image url="@/VaxTodo/images/users.png"/>
+                    </image>
+                </ImageView>
+
+                <PasswordField fx:id="passwdFieldEmploye" layoutX="150.0" layoutY="140.0" prefHeight="30.0"
+                               prefWidth="300.0" promptText="Mot de passe"
+                               style="-fx-border-width: 2; -fx-border-color: #A9A9A9; -fx-border-radius: 5;">
+                    <font>
+                        <Font name="SansSerif Regular" size="14.0"/>
+                    </font>
+                </PasswordField>
+
+                <ImageView fitHeight="40.0" fitWidth="35.0" layoutX="110.0" layoutY="140.0" pickOnBounds="true"
+                           preserveRatio="true">
+                    <image>
+                        <Image url="@/VaxTodo/images/lock.png"/>
+                    </image>
+                </ImageView>
+
+                <!-- <CheckBox layoutX="150.0" layoutY="195.0" mnemonicParsing="false" style="-fx-text-fill: #A9A9A9;"
+                          text="Se Souvenir">
+                    <font>
+                        <Font name="SansSerif Regular" size="15.0"/>
+                    </font>
+                </CheckBox> -->
+
+                <Label fx:id="lblInvalidEmploye" alignment="CENTER" contentDisplay="CENTER" layoutX="150.0"
+                       layoutY="175.0" prefHeight="16.0" prefWidth="300.0" textAlignment="CENTER" textFill="RED">
+                    <opaqueInsets>
+                        <Insets/>
+                    </opaqueInsets>
+                </Label>
+
+                <Button fx:id="btnLoginEmploye" layoutX="335.0" layoutY="195.0" mnemonicParsing="false"
+                        onAction="#btnLoginEmployeClick"
+                        style="-fx-background-color: #24a0ed; -fx-text-fill: white; -fx-border-radius: 5; -fx-border-width: 2; -fx-border-color: #24a0ed;"
+                        text="Connexion">
+                    <font>
+                        <Font size="15.0"/>
+                    </font>
+                </Button>
+
+                <Button fx:id="btnForgotPassWD" layoutX="190.0" layoutY="235.0" mnemonicParsing="false"
+                        onAction="#btnForgotPassWDClick"
+                        style="-fx-background-color: transparent; -fx-text-fill: #A9A9A9;" text="Mot de passe oublié?"
+                        underline="true">
+                    <font>
+                        <Font size="15.0"/>
+                    </font>
+                </Button>
+                <!-- End of Employe Login Form -->
+
+                <!-- A simple line Separator -->
+                <Line endX="500.0" endY="400.0" fill="DARKGRAY" layoutY="-110.0" opacity="0.5" startX="100.0"
+                      startY="400.0" stroke="#a8a8a8ad" strokeLineJoin="BEVEL" strokeWidth="3.0">
+                    
+                    <!-- <padding>
+                        <Insets top="10" right="0" bottom="10" left="0"/>
+                    </padding> -->
+                </Line>
+
+                <!-- The Beginning of Benevole Login Form -->
+                <Label layoutX="230.0" layoutY="315.0" prefHeight="36.0" prefWidth="230.0"
+                       style="-fx-text-fill: #A9A9A9;" text="Bénévole">
+                    <font>
+                        <Font name="SansSerif Regular" size="30.0"/>
+                    </font>
+                </Label>
+
+                <TextField fx:id="textFieldBenevole" layoutX="155.0" layoutY="355.0" prefHeight="30.0"
+                           prefWidth="300.0" promptText="Code d'identification"
+                           style="-fx-border-width: 2; -fx-border-color: #A9A9A9; -fx-border-radius: 5;">
+                    <font>
+                        <Font name="SansSerif Regular" size="14.0"/>
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="TEXT"/>
+                    </cursor>
+                </TextField>
+
+                <ImageView fitHeight="40.0" fitWidth="35.0" layoutX="110.0" layoutY="355.0" pickOnBounds="true"
+                           preserveRatio="true">
+                    <image>
+                        <Image url="@/VaxTodo/images/users.png"/>
+                    </image>
+                </ImageView>
+
+                <PasswordField fx:id="passwdFieldBenevole" layoutX="155.0" layoutY="395.0" prefHeight="30.0"
+                               prefWidth="300.0" promptText="Mot de passe"
+                               style="-fx-border-width: 2; -fx-border-color: #A9A9A9; -fx-border-radius: 5;">
+                    <font>
+                        <Font name="SansSerif Regular" size="14.0"/>
+                    </font>
+                </PasswordField>
+
+                <ImageView fitHeight="40.0" fitWidth="35.0" layoutX="110.0" layoutY="395.0" pickOnBounds="true"
+                           preserveRatio="true">
+                    <image>
+                        <Image url="@/VaxTodo/images/lock.png"/>
+                    </image>
+                </ImageView>
+
+                <Label fx:id="lblInvalidBenevole" alignment="CENTER" contentDisplay="CENTER" layoutX="150.0"
+                       layoutY="430.0" prefHeight="16.0" prefWidth="300.0" textAlignment="CENTER" textFill="RED">
+                    <opaqueInsets>
+                        <Insets/>
+                    </opaqueInsets>
+                </Label>
+
+                <Button fx:id="btnLoginBenevole" layoutX="335.0" layoutY="450.0" mnemonicParsing="false"
+                        onAction="#btnLoginBenevoleClick"
+                        style="-fx-background-color: #24a0ed; -fx-text-fill: white; -fx-border-radius: 5; -fx-border-width: 2; -fx-border-color: #24a0ed;"
+                        text="Connexion">
+                    <font>
+                        <Font size="15.0"/>
+                    </font>
+                </Button>
+
+                <Button fx:id="btnForgotPassWD" layoutX="190.0" layoutY="490.0" mnemonicParsing="false"
+                        onAction="#btnForgotPassWDClick"
+                        style="-fx-background-color: transparent; -fx-text-fill: #A9A9A9;" text="Mot de passe oublié?"
+                        underline="true">
+                    <font>
+                        <Font size="15.0"/>
+                    </font>
+                </Button>
+                <!-- End of Benevole Login Form -->
+
+                <!-- The Beginning of Signup form -->
+                <!-- <Label layoutX="230.0" layoutY="275.0" prefHeight="36.0" prefWidth="230.0"
+                       style="-fx-text-fill: #A9A9A9;" text="Bénévole">
+                    <font>
+                        <Font name="SansSerif Regular" size="30.0"/>
+                    </font>
+                </Label>
+
+                <TextField fx:id="textFieldBenevole" layoutX="155.0" layoutY="320.0" prefHeight="30.0"
+                           prefWidth="300.0" promptText="Username"
+                           style="-fx-border-width: 2; -fx-border-color: #A9A9A9; -fx-border-radius: 5;">
+                    <font>
+                        <Font name="SansSerif Regular" size="14.0"/>
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="TEXT"/>
+                    </cursor>
+                </TextField>
+
+                <ImageView fitHeight="40.0" fitWidth="35.0" layoutX="110.0" layoutY="320.0" pickOnBounds="true"
+                           preserveRatio="true">
+                    <image>
+                        <Image url="@/VaxTodo/images/users.png"/>
+                    </image>
+                </ImageView>
+
+                <TextField fx:id="signUpEmailTextField" layoutX="155.0" layoutY="360.0" prefHeight="30.0"
+                           prefWidth="300.0" promptText="Email"
+                           style="-fx-border-width: 2; -fx-border-color: #A9A9A9; -fx-border-radius: 5;">
+                    <font>
+                        <Font name="SansSerif Regular" size="14.0"/>
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="TEXT"/>
+                    </cursor>
+                </TextField>
+
+                <ImageView fitHeight="40.0" fitWidth="35.0" layoutX="110.0" layoutY="360.0" pickOnBounds="true"
+                           preserveRatio="true">
+                    <image>
+                        <Image url="@/VaxTodo/images/email.png"/>
+                    </image>
+                </ImageView>
+
+                <PasswordField fx:id="passwdFieldBenevole" layoutX="155.0" layoutY="400.0" prefHeight="30.0"
+                               prefWidth="300.0" promptText="Password"
+                               style="-fx-border-width: 2; -fx-border-color: #A9A9A9; -fx-border-radius: 5;">
+                    <font>
+                        <Font name="SansSerif Regular" size="14.0"/>
+                    </font>
+                </PasswordField>
+
+                <ImageView fitHeight="40.0" fitWidth="35.0" layoutX="110.0" layoutY="400.0" pickOnBounds="true"
+                           preserveRatio="true">
+                    <image>
+                        <Image url="@/VaxTodo/images/lock.png"/>
+                    </image>
+                </ImageView>
+
+                <PasswordField fx:id="signUpRepeatPasswordPasswordField" layoutX="155.0" layoutY="440.0"
+                               prefHeight="30.0" prefWidth="300.0" promptText="Repeat Password"
+                               style="-fx-border-width: 2; -fx-border-color: #A9A9A9; -fx-border-radius: 5;">
+                    <font>
+                        <Font name="SansSerif Regular" size="14.0"/>
+                    </font>
+                </PasswordField>
+
+                <Label fx:id="invalidSignupCredentials" alignment="CENTER" contentDisplay="CENTER" layoutX="160.0"
+                       layoutY="580.0" prefHeight="16.0" prefWidth="300.0" textAlignment="CENTER" textFill="RED">
+                    <opaqueInsets>
+                        <Insets/>
+                    </opaqueInsets>
+                </Label>
+
+                <Button fx:id="signUpButton" layoutX="230.0" layoutY="615.0" mnemonicParsing="false"
+                        onAction="#onSignUpButtonClick" prefHeight="33.0" prefWidth="130.0"
+                        style="-fx-background-color: #24a0ed; -fx-text-fill: white; -fx-border-radius: 5; -fx-border-width: 2; -fx-border-color: #24a0ed;"
+                        text="Sign-Up">
+                    <font>
+                        <Font size="15.0"/>
+                    </font>
+                </Button>
+
+                <Label layoutX="130.0" layoutY="480.0" prefHeight="20.0" prefWidth="105.0"
+                       style="-fx-text-fill: #A9A9A9;" text="Date of Birth">
+                    <font>
+                        <Font name="SansSerif Regular" size="15.0"/>
+                    </font>
+                </Label>
+
+                <DatePicker fx:id="signUpDateDatePicker" layoutX="250.0" layoutY="480.0" promptText="mm/dd/yyyy"
+                            showWeekNumbers="true"/>
+
+                <Label layoutX="130.0" layoutY="515.0" prefHeight="20.0" prefWidth="90.0"
+                       style="-fx-text-fill: #A9A9A9;" text="Gender">
+                    <font>
+                        <Font name="SansSerif Regular" size="15.0"/>
+                    </font>
+                </Label>
+
+                <RadioButton layoutX="300.0" layoutY="515.0" mnemonicParsing="false" selected="true" text="Male"
+                             textFill="DARKGRAY">
+                    <toggleGroup>
+                        <ToggleGroup fx:id="Gender"/>
+                    </toggleGroup>
+                    <font>
+                        <Font size="14.0"/>
+                    </font>
+                </RadioButton>
+
+                <RadioButton layoutX="390.0" layoutY="515.0" mnemonicParsing="false" text="Female" textFill="DARKGRAY"
+                             toggleGroup="$Gender">
+                    <font>
+                        <Font size="14.0"/>
+                    </font>
+                </RadioButton>
+
+                <CheckBox fx:id="termsConditionsCheckbox" layoutX="160.0" layoutY="545.0" mnemonicParsing="false"
+                          selected="true" style="-fx-text-fill: #A9A9A9;" text="I have read the Terms and Conditions">
+                    <font>
+                        <Font name="SansSerif Regular" size="15.0"/>
+                    </font>
+                </CheckBox> -->
+
+                <!--<Button layoutX="200.0" layoutY="660.0" mnemonicParsing="false"
+                        style="-fx-background-color: transparent; -fx-text-fill: #A9A9A9;" text="Terms and Conditions"
+                        underline="true">
+                    <font>
+                        <Font size="15.0"/>
+                    </font>
+                </Button>-->
+                <!-- The End of Signup form -->
+
+            </children>
+        </AnchorPane>
+    </right>
+    <!-- Ending of the left part of the Borderpane -->
+
+    <!-- Beginning of the bottom part of the Borderpane -->
+    <bottom>
+
+        <!-- Simple Copyright -->
+        <Label prefHeight="20.0" prefWidth="150.0" style="-fx-text-fill: #B9a9a9;" text="VaxTodo © 2021 Mohamed, Christian, Louis"
+               BorderPane.alignment="CENTER"/> 
+    </bottom>
+    <!-- Ending of the left part of the Borderpane -->
+
+</BorderPane>

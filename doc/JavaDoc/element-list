@@ -1,0 +1,7 @@
+unnamed package
+VaxTodo
+VaxTodo.Configs
+VaxTodo.Controllers
+VaxTodo.Models
+VaxTodo.Views.CommandLine
+VaxTodo.Views.Interface.Models

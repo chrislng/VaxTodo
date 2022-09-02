@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.shape.Line?>
+<?import VaxTodo.Views.Interface.Models.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="VaxTodo.Controllers.ControllerMenuGestionVisiteurs">
+
+    <!-- Beginning of the left part of the Borderpane -->
+    <left>
+
+        <!-- An AnchorPane in the Left BorderPane -->
+        <AnchorPane fx:id="anchorPaneLeft" prefHeight="700.0" prefWidth="400.0" styleClass="anchorPaneLeft" BorderPane.alignment="CENTER">
+            <children>
+
+                <!-- Logo -->
+                <ImageView fitHeight="250.0" fitWidth="250.0" layoutX="65.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+                           <!--! fitHeight="400com.login.login.HelloController.0"-->
+                    <image>
+                        <Image url="@/VaxTodo/images/VaxTodo-handmaid-logo-v2.png" />
+                        <!-- @/VaxTodo/images/logo_v2.png -->
+                    </image>
+                </ImageView>
+                <Line endX="106.0" endY="300.0" layoutX="275.0" layoutY="380" startX="106.0" startY="-380.0" styleClass="lineSeparatorVertical" />
+            <ScrollPane hbarPolicy="NEVER" layoutX="-1.0" layoutY="239.0" prefHeight="443.0" prefWidth="380.0" styleClass="scrollPane" vbarPolicy="NEVER">
+               <content>
+                  <ListView fx:id="lvAccountInfos" prefHeight="442.0" prefWidth="380.0" styleClass="listView" />
+               </content>
+            </ScrollPane>
+            <Label fx:id="lblListViewInfos" alignment="CENTER" layoutX="2.0" layoutY="200.0" prefHeight="18.0" prefWidth="374.0" styleClass="lblTitleApp" textAlignment="CENTER" underline="true" />
+            </children>
+        </AnchorPane>
+    </left>
+    <!-- Ending of the left part of the Borderpane -->
+
+    <right>
+        <AnchorPane prefHeight="700.0" prefWidth="600.0" styleClass="anchorPaneRight" BorderPane.alignment="CENTER">
+            <children>
+                <Button fx:id="btnDisconnect" layoutX="475.0" layoutY="13.0" mnemonicParsing="false" onAction="#btnDisconnectClick" styleClass="btnDisconnect" text="Déconnexion" />
+                <Button fx:id="btnReturn" layoutX="501.0" layoutY="68.0" mnemonicParsing="false" onAction="#btnReturnClick" styleClass="btnReturn" text="Retour" />
+                <!-- text="Retourner au Menu Précédent"> -->
+                
+                <Label fx:id="lblFullName" layoutX="116.0" layoutY="4.0" prefHeight="40.0" prefWidth="349.0" styleClass="lblTitleApp" text="" textAlignment="CENTER" underline="true" />
+                <Label fx:id="lblAccountInfos" layoutX="115.0" layoutY="35.0" prefHeight="46.0" prefWidth="304.0" styleClass="" text="" />
+                <Label fx:id="lblTitleOption" alignment="CENTER" layoutX="123.0" layoutY="108.0" prefHeight="38.0" prefWidth="317.0" styleClass="lblTitleLoginUser" text="Choisir une Option" textAlignment="CENTER" />
+
+                <!-- layoutX="5.0" layoutX="150.0" layoutY="253.0" -->
+                <ImageView fitHeight="40.0" fitWidth="35.0" layoutX="97.5" layoutY="175.0" pickOnBounds="true" preserveRatio="true">
+                    <Image url="@/VaxTodo/images/add-icon-colorized.png" />
+                </ImageView>
+                <Button fx:id="btnMenuAjouterVisiteur" layoutX="45.0" layoutY="170.0" mnemonicParsing="false" onAction="#btnMenuAjouterVisiteurClick" prefHeight="118.0" prefWidth="142.0" styleClass="btnMenuAction" text="Ajouter&#13;un Visiteur" textAlignment="CENTER" />
+
+                <!-- layoutX="110.0" layoutY="175.0" -->
+                <ImageView fitHeight="40.0" fitWidth="35.0" layoutX="285.0" layoutY="175.0" pickOnBounds="true" preserveRatio="true">
+                    <Image url="@/VaxTodo/images/modify-icon-colorized.png" />
+                </ImageView>
+                <Button fx:id="btnMenuModifierVisiteur" layoutX="230.0" layoutY="170.0" mnemonicParsing="false" onAction="#btnMenuModifierVisiteurClick" prefHeight="118.0" prefWidth="146.0" styleClass="btnMenuAction" text="Modifier&#13;un Visiteur" textAlignment="CENTER" />
+                
+                <ImageView fitHeight="40.0" fitWidth="35.0" layoutX="470.0" layoutY="175.0" pickOnBounds="true" preserveRatio="true">
+                    <Image url="@/VaxTodo/images/delete-icon-colorized.png" />
+                </ImageView>
+                <Button fx:id="btnMenuSupprimerVisiteur" layoutX="415.0" layoutY="170.0" mnemonicParsing="false" onAction="#btnMenuSupprimerVisiteurClick" prefHeight="118.0" prefWidth="146.0" styleClass="btnMenuAction" text="Supprimer&#13;un Visiteur" textAlignment="CENTER" />
+
+                <!--* Left Side -->
+                <ImageView fitHeight="40.0" fitWidth="35.0" layoutY="315.0" pickOnBounds="true" preserveRatio="true">
+                    <Image url="@/VaxTodo/images/electronic-key-colorized.png" />
+                </ImageView>
+                <!-- editable="false" disable="true" -->
+                <MaskedTextField fx:id="txtFieldNoCompte" alignment="CENTER" layoutX="40.0" layoutY="320.0" prefHeight="30.0" prefWidth="250.0" promptText="Numéro du compte" styleClass="txtFieldNoCompte" />
+                <Label fx:id="lblInvalidNoCompte" alignment="CENTER" contentDisplay="CENTER" layoutX="40.0" layoutY="355.0" prefHeight="20.0" prefWidth="250.0" textAlignment="CENTER" textFill="RED" />                
+
+                <!-- <ImageView fitHeight="40.0" fitWidth="35.0" layoutY="380.0" pickOnBounds="true" preserveRatio="true">
+                   <Image url="@/VaxTodo/images/enter-numpad-icon-colorized.png" />
+                </ImageView>
+                <MaskedTextField fx:id="txtFieldCodeIdentification" layoutX="40.0" layoutY="380.0" prefHeight="30.0" prefWidth="250.0" promptText="Code d'Identification" styleClass="txtField" />
+                <Label fx:id="lblInvalidCodeIdentification" alignment="CENTER" contentDisplay="CENTER" layoutX="40.0" layoutY="415.0" prefHeight="20.0" prefWidth="250.0" textAlignment="CENTER" textFill="RED" />                
+
+                <ImageView fitHeight="40.0" fitWidth="35.0" layoutY="440.0" pickOnBounds="true" preserveRatio="true">
+                   <Image url="@/VaxTodo/images/lock-colorized.png" />
+                </ImageView>
+                <PasswordField fx:id="passwdField" layoutX="40.0" layoutY="440.0" prefHeight="30.0" prefWidth="200.0" promptText="Mot de passe" styleClass="txtField" />
+                <TextField fx:id="txtFieldPasswd" layoutX="40.0" layoutY="440.0" prefHeight="30.0" prefWidth="200.0" promptText="Mot de passe" styleClass="txtField" />
+                <ImageView fx:id="viewTogglePasswd" fitHeight="40.0" fitWidth="35.0" layoutX="250.0" layoutY="440.0" onMouseClicked="#btnTogglePasswdClick" pickOnBounds="true" preserveRatio="true" styleClass="btnTogglePasswd"> 
+                    <image>
+                        <Image url="@/VaxTodo/images/eye-closed-colorized.png" />
+                    </image>
+                </ImageView>
+                <Label fx:id="lblInvalidPasswd" alignment="CENTER" contentDisplay="CENTER" layoutX="40.0" layoutY="475.0" prefHeight="20.0" prefWidth="250.0" textAlignment="CENTER" textFill="RED" />                 -->
+
+                <ImageView fitHeight="40.0" fitWidth="35.0" layoutY="380.0" pickOnBounds="true" preserveRatio="true">
+                   <Image url="@/VaxTodo/images/phone-icon-colorized.png" />
+                </ImageView>
+                <MaskedTextField fx:id="txtFieldNoTel" layoutX="40.0" layoutY="380.0" prefHeight="30.0" prefWidth="250.0" promptText="Numéro de téléphone" styleClass="txtField" />
+                <Label fx:id="lblInvalidNoTel" alignment="CENTER" contentDisplay="CENTER" layoutX="40.0" layoutY="415.0" prefHeight="20.0" prefWidth="250.0" textAlignment="CENTER" textFill="RED" />
+
+                <ImageView fitHeight="40.0" fitWidth="35.0" layoutY="440.0" pickOnBounds="true" preserveRatio="true">
+                   <Image url="@/VaxTodo/images/email-icon-colorized.png" />
+                </ImageView>
+                <MaskedTextField fx:id="txtFieldCourriel" layoutX="40.0" layoutY="440.0" prefHeight="30.0" prefWidth="250.0" promptText="Courriel" styleClass="txtField" />
+                <Label fx:id="lblInvalidCourriel" alignment="CENTER" contentDisplay="CENTER" layoutX="40.0" layoutY="475.0" prefHeight="20.0" prefWidth="250.0" textAlignment="CENTER" textFill="RED" />
+
+                <ImageView fitHeight="40.0" fitWidth="40.0" layoutY="495.0" pickOnBounds="true" preserveRatio="true">
+                    <Image url="@/VaxTodo/images/date-icon-colorized.png" />
+                </ImageView>
+                <!-- <DatePicker fx:id="dateDateNaissance" layoutX="40.0" layoutY="620.0" prefHeight="30.0" prefWidth="250.0" promptText="Date de Naissance" styleClass="txtField" /> -->
+                <DatePicker fx:id="datePickerDateNaissance" layoutX="40.0" layoutY="500.0" prefHeight="30.0" prefWidth="250.0" promptText="Date de Naissance" styleClass="txtField" />
+                <Label fx:id="lblInvalidDateNaissance" layoutX="40.0" layoutY="535.0" prefHeight="20.0" prefWidth="170.0" textFill="RED" />
+                <Button fx:id="btnClearDatePicker" layoutX="182.0" layoutY="535.0" mnemonicParsing="false" onAction="#btnClearDatePickerClick" styleClass="btnLogin" text="Effacer Date" textAlignment="CENTER" />
+
+                <!--* Right Side -->               
+                <ImageView fitHeight="40.0" fitWidth="35.0" layoutX="300.0" layoutY="315.0" pickOnBounds="true" preserveRatio="true">
+                   <Image url="@/VaxTodo/images/users-colorized.png" />
+                </ImageView>
+                <MaskedTextField fx:id="txtFieldNom" layoutX="340.0" layoutY="320.0" prefHeight="30.0" prefWidth="250.0" promptText="Nom" styleClass="txtField" />
+                <Label fx:id="lblInvalidNom" alignment="CENTER" contentDisplay="CENTER" layoutX="340.0" layoutY="355.0" prefHeight="20.0" prefWidth="250.0" textAlignment="CENTER" textFill="RED" />
+
+                <ImageView fitHeight="40.0" fitWidth="35.0" layoutX="300.0" layoutY="375.0" pickOnBounds="true" preserveRatio="true">
+                    <Image url="@/VaxTodo/images/users-colorized.png" />
+                </ImageView>
+                <MaskedTextField fx:id="txtFieldPrenom" layoutX="340.0" layoutY="380.0" prefHeight="30.0" prefWidth="250.0" promptText="Prénom" styleClass="txtField" />
+                <Label fx:id="lblInvalidPrenom" alignment="CENTER" contentDisplay="CENTER" layoutX="340.0" layoutY="415.0" prefHeight="20.0" prefWidth="250.0" textAlignment="CENTER" textFill="RED" />
+
+                <ImageView fitHeight="40.0" fitWidth="35.0" layoutX="300.0" layoutY="435.0" pickOnBounds="true" preserveRatio="true">
+                   <Image url="@/VaxTodo/images/house-address-icon-colorized.png" />
+                </ImageView>
+                <MaskedTextField fx:id="txtFieldAdresse" layoutX="340.0" layoutY="440.0" prefHeight="30.0" prefWidth="250.0" promptText="Adresse" styleClass="txtField" />
+                <Label fx:id="lblInvalidAdresse" alignment="CENTER" contentDisplay="CENTER" layoutX="340.0" layoutY="475.0" prefHeight="20.0" prefWidth="250.0" textAlignment="CENTER" textFill="RED" />
+
+                <ImageView fitHeight="40.0" fitWidth="35.0" layoutX="300.0" layoutY="495.0" pickOnBounds="true" preserveRatio="true">
+                   <Image url="@/VaxTodo/images/postal-icon-colorized.png" />
+                </ImageView>
+                <MaskedTextField fx:id="txtFieldCodePostal" layoutX="340.0" layoutY="500.0" prefHeight="30.0" prefWidth="250.0" promptText="Code Postal" styleClass="txtField" />
+                <Label fx:id="lblInvalidCodePostal" alignment="CENTER" contentDisplay="CENTER" layoutX="340.0" layoutY="535.0" prefHeight="20.0" prefWidth="250.0" textAlignment="CENTER" textFill="RED" />
+
+                <ImageView fitHeight="40.0" fitWidth="35.0" layoutX="300.0" layoutY="555.0" pickOnBounds="true" preserveRatio="true">
+                   <Image url="@/VaxTodo/images/city-map-icon-colorized.png" />
+                </ImageView>
+                <MaskedTextField fx:id="txtFieldVille" layoutX="340.0" layoutY="560.0" prefHeight="30.0" prefWidth="250.0" promptText="Ville" styleClass="txtField" />
+                <Label fx:id="lblInvalidVille" alignment="CENTER" contentDisplay="CENTER" layoutX="340.0" layoutY="595.0" prefHeight="20.0" prefWidth="250.0" textAlignment="CENTER" textFill="RED" />
+
+                <!-- <ImageView fitHeight="40.0" fitWidth="35.0" layoutX="300.0" layoutY="620.0" pickOnBounds="true" preserveRatio="true">
+                    <Image url="@/VaxTodo/images/enter-numpad-icon-colorized.png" />
+                </ImageView>
+                <TextField fx:id="" layoutX="340.0" layoutY="620.0" prefHeight="30.0" prefWidth="250.0" promptText="Code d'Identification" styleClass="txtField" />
+                <Label fx:id="lblInvalidNoCompte2" alignment="CENTER" contentDisplay="CENTER" layoutX="340.0" layoutY="655.0" prefHeight="20.0" prefWidth="250.0" textAlignment="CENTER" textFill="RED" /> -->
+
+                <Button fx:id="btnSendReport" layoutY="620.0" mnemonicParsing="false" onAction="#btnSendReportClick" styleClass="btnLogin" text="Envoyer Rapport&#13;de Vaccination" textAlignment="CENTER" />
+                <Button fx:id="btnGotoFormulaire" layoutX="155.0" layoutY="620.0" mnemonicParsing="false" onAction="#btnGotoFormulaireClick" styleClass="btnLogin" text="Gérer Formulaire&#13;d'Identification" textAlignment="CENTER" />
+
+                <Button fx:id="btnRestoreAllFields" layoutX="300.0" layoutY="620.0" mnemonicParsing="false" onAction="#btnRestoreAllFieldsClick" styleClass="btnLogin" text="Restaurer tous les&#13;champs de texte" textAlignment="CENTER" />
+
+                <!-- layoutX="402.5" layoutY="620.0" -->
+                <Button fx:id="btnClearAllFields" layoutX="455.0" layoutY="620.0" mnemonicParsing="false" onAction="#btnClearAllFieldsClick" styleClass="btnLogin" text="Effacer tous les&#13;champs de texte" textAlignment="CENTER" />
+            </children>
+        </AnchorPane>
+    </right>
+    
+    <!-- Beginning of the bottom part of the Borderpane -->
+    <bottom>
+
+        <!-- Simple Copyright -->
+        <Label fx:id="lblCopyright" alignment="CENTER" prefHeight="20.0" prefWidth="1000.0" styleClass="lblCopyright" text="VaxTodo © 2021 Mohamed, Christian, Louis" textAlignment="CENTER" BorderPane.alignment="CENTER" />
+    </bottom>
+    <!-- Ending of the left part of the Borderpane -->
+</BorderPane>

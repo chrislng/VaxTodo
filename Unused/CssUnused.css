@@ -1,0 +1,46 @@
+.btnMenuAction {
+    /* -fx-position: relative; */
+    /* -fx-display: inline-flex; */
+    /* -fx-width: 180px;
+    -fx-height: 55px;
+    -fx-margin: 0 15px;
+    -fx-perspective: 1000px; */
+    
+    /* -fx-font-size: 19px;
+    -fx-letter-spacing: 1px;
+    -fx-transform-style: preserve-3d; */
+    /* -fx-transform: translateZ(-25px); */
+    -fx-translate-z: -25px;
+    /* -fx-transition: transform .25s; */
+    -fx-font-family: sans-serif;
+}
+.btnMenuAction:before, .btnMenuAction:after{
+    /* -fx-position: absolute; */
+    /* -fx-content: "BUTTON";
+    -fx-height: 55px;
+    -fx-width: 180px; */
+    -fx-display: flex;
+    -fx-align-items: center;
+    -fx-justify-content: center;
+    /* -fx-border-style: 5px solid black; */
+    -fx-box-sizing: border-box;
+    -fx-border-radius: 5px;
+}
+.btnMenuAction:before{
+    -fx-text-fill: #fff;
+    -fx-background-color: #000;
+    /* -fx-transform: rotateY(0deg) translateZ(25px); */
+    -fx-rotate: 0;
+    -fx-translate-z: 25px;
+}
+.btnMenuAction:after{
+    -fx-text-fill: #000;
+    /* -fx-transform: rotateX(90deg) translateZ(25px); */
+    -fx-rotate: 90;
+    -fx-translate-z: 25px;
+}
+.btnMenuAction:hover{
+    /* -fx-transform: translateZ(-25px) rotateX(-90deg); */
+    -fx-rotate: -90;
+    -fx-translate-z: -25px;
+}

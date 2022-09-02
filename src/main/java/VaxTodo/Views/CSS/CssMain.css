@@ -1,0 +1,270 @@
+* {
+    /* My Color Scheme */
+    -normal-color: #A9A9A9;
+
+    -primary-color: #354749; /*#343A40*/
+    -secondary-color:  none; /*#343A40*/
+    -tertiary-color: none;
+
+    -primary-text-color: black;
+    -secondary-text-color: #E4F0FF;
+    -tertiary-text-color: white;
+    -ternary-text-color: #00A9EF;
+
+    -primary-accent-color: #1b8d98; /*#0275d8*/ /*#FBC02D;*/
+    -secondary-accent-color: #2E2D4D; /*#FFEECB; /*#C3FCF2; /*#2E2D4D;*/
+    -tertiary-accent-color: #69ca62; /*#3498db;*/
+    -ternary-accent-color: #5cb85c;
+
+    -primary-background-color: #E4F0FF; /*#649B92;*/
+    -secondary-background-color: none; /*#006B60;*/
+    -tertiary-background-color: none;
+
+    /* BootStrap Color Scheme */
+    -bootstrap-primary-color: #0275d8;
+    -bootstrap-success-color: #5cb85c;
+    -bootstrap-info-color: #5bc0de;
+    -bootstrap-warning-color: #f0ad4e;
+    -bootstrap-danger-color: #d9534f;
+    -bootstrap-inverse-color: #292b2c;
+    -bootstrap-faded-color: #f7f7f7;
+}
+
+.successMessage {
+    -fx-text-fill: -bootstrap-success-color;
+}
+.errorMessage {
+    -fx-text-fill: -bootstrap-danger-color;
+}
+
+.styleNormal {
+    -fx-border-color: -normal-color; 
+
+    -fx-border-width: 2; 
+    -fx-border-radius: 5;
+}
+.styleError {
+    -fx-border-color: -bootstrap-danger-color; 
+
+    -fx-border-width: 2; 
+    -fx-border-radius: 5;
+}
+
+.anchorPaneLeft {
+    -fx-background-color: -primary-background-color;
+    /* #1B4E98; */
+    /* #23B5C3; */
+    /* #A9A9A9; */
+}
+.anchorPaneRight {
+    -fx-background-color: -primary-background-color;
+}
+
+.lineSeparatorHorizontal {
+    -fx-fill: -primary-color; /*DARKGRAY*/
+    -fx-opacity: 0.75;
+    -fx-stroke: -primary-color; /*#a8a8a8ad*/
+    -fx-stroke-line-join: bevel;
+    -fx-stroke-width: 3.0;
+
+    /* fill="DARKGRAY"
+    opacity="0.5" 
+    stroke="#a8a8a8ad" strokeLineJoin="BEVEL" strokeWidth="3.0" */
+}
+.lineSeparatorVertical{
+    -fx-fill: -primary-accent-color; /*DARKGRAY*/
+    -fx-opacity: 1;
+    -fx-stroke: -primary-accent-color;
+    /* -fx-stroke-line-join: bevel; */
+    -fx-stroke-width: 4.25;
+}
+
+.lblTitleApp {
+    -fx-font-weight: bold;
+
+    -fx-background-color: transparent;
+    -fx-text-fill: -primary-color;
+    /* -fx-text-fill: #083B66; */
+
+    -fx-font-family: SansSerif Regular;
+    -fx-font-size: 25px;
+}
+.lblTitleLoginUser {
+    -fx-text-fill: -primary-color;
+    /* -fx-text-fill: -normal-color; */
+
+    -fx-font-family: SansSerif Regular;
+    -fx-font-size: 30px;
+}
+.lblCopyright {
+    -fx-font-weight: bold;
+
+    -fx-background-color: -primary-color;
+    -fx-text-fill: -secondary-text-color;
+    /* -fx-text-fill: #B9a9a9; */
+}
+
+.txtField {
+    -fx-border-width: 2; 
+    -fx-border-color: -primary-color; 
+    -fx-border-radius: 5;
+
+    -fx-font-family: SansSerif Regular;
+    -fx-font-size: 14px;
+}
+.txtFieldNoCompte {
+    -fx-border-width: 2; 
+    -fx-border-color: -primary-color; 
+    -fx-border-radius: 5;
+
+    -fx-font-family: SansSerif Regular;
+    -fx-font-size: 14px;
+    
+    -fx-font-weight: bold;
+    /* -fx-background-color: transparent; */
+}
+
+.btnLogin {
+    -fx-text-fill: -primary-accent-color; /*-bootstrap-primary-color;*/
+    -fx-background-color: transparent; 
+    -fx-border-color: -primary-accent-color; /*-bootstrap-primary-color;*/
+
+    -fx-border-radius: 5; 
+    -fx-border-width: 2; 
+    
+    /* -fx-background-color: #24a0ed; 
+    -fx-border-color: #24a0ed; */
+
+    -fx-font-family: SansSerif Regular;
+    -fx-font-size: 15px;
+}
+.btnLogin:hover {
+    -fx-text-fill: -secondary-text-color; 
+    -fx-background-color: -primary-accent-color; /*-bootstrap-primary-color;*/
+
+    -fx-scale-y: 1.1;
+}
+.btnLogin:hover:pressed {
+    -fx-scale-y: 0.9;
+    -fx-scale-x: 0.9;
+}
+
+.btnForgotPasswd {
+    -fx-background-color: transparent; 
+    -fx-text-fill: -primary-color;
+
+    -fx-font-family: SansSerif Regular;
+    -fx-font-size: 15px;
+}
+.btnForgotPasswd:hover {
+    -fx-text-fill: -secondary-text-color; 
+    -fx-background-color: -primary-color;
+
+    -fx-scale-y: 1.1;
+}
+.btnForgotPasswd:hover:pressed {
+    -fx-scale-y: 0.9;
+    -fx-scale-x: 0.9;
+}
+
+.btnReturn {
+    -fx-text-fill: -bootstrap-warning-color; 
+    -fx-border-color: -bootstrap-warning-color; 
+    -fx-background-color: transparent; 
+
+    -fx-border-width: 2; 
+    -fx-border-radius: 5;
+
+    -fx-font-size: 15px;
+}
+.btnReturn:hover {
+    -fx-text-fill: -secondary-text-color; 
+    -fx-background-color: -bootstrap-warning-color;
+
+    -fx-scale-y: 1.1;
+}
+.btnReturn:hover:pressed {
+    -fx-scale-y: 0.9;
+    -fx-scale-x: 0.9;
+}
+
+.btnDisconnect {
+    -fx-text-fill: -bootstrap-danger-color; 
+    -fx-border-color: -bootstrap-danger-color; 
+    -fx-background-color: transparent; 
+
+    -fx-border-width: 2; 
+    -fx-border-radius: 5;
+
+    -fx-font-size: 15px;
+
+    /* -fx-skin: 'VaxTodo.Views.Interface.Models.StyledButtonSkin'; */
+    /* -fx-transition-delay: 0.25; */
+}
+.btnDisconnect:hover {
+    /* -fx-text-fill: #fff;
+    -fx-background-color: #cb72aa;
+    box-shadow: inset 0 0 0 2em #cb72aa; */
+
+    -fx-text-fill: -secondary-text-color; 
+    -fx-background-color: -bootstrap-danger-color;
+
+    -fx-scale-y: 1.1;
+}
+.btnDisconnect:hover:pressed {
+    -fx-scale-y: 0.9;
+    -fx-scale-x: 0.9;
+}
+
+.btnTogglePasswd {
+    /* -fx-graphic: url("Views/CSS/eye-closed-colorized.png"); */
+    /* -fx-background-image: url("@/images/eye-closed-colorized.png"); */
+    /* -fx-graphic: url('http://icons.iconarchive.com/icons/aha-soft/desktop-buffet/128/Pizza-icon.png'); */
+}
+.btnTogglePasswd:hover {
+    -fx-scale-y: 1.5;
+    /* -fx-text-fill: -secondary-text-color; 
+    -fx-background-color: -bootstrap-danger-color; */
+
+    /* -fx-graphic: url('images/eye-opened-colorized.png'); */
+    /* -fx-graphic: url('http://icons.iconarchive.com/icons/aha-soft/desktop-buffet/128/Piece-of-cake-icon.png'); */
+    /* -fx-scale-y: 1.1; */
+}
+.btnTogglePasswd:hover:pressed {
+    -fx-scale-y: 0.9;
+    -fx-scale-x: 0.9;
+}
+
+.scrollPane {
+    -fx-background-color:transparent;
+}
+.scrollPane > .viewport {
+    -fx-background-color: transparent;
+}
+
+.listView {
+    -fx-background-color: transparent;
+}
+
+.btnMenuAction {
+    -fx-text-fill: -primary-color; 
+    -fx-border-color: -primary-color; 
+    -fx-background-color: transparent; 
+
+    -fx-border-width: 2; 
+    -fx-border-radius: 5;
+
+    /* -fx-font-size: 15px; */
+    
+    -fx-font-weight: bold;
+}
+.btnMenuAction:hover {
+    -fx-text-fill: -secondary-text-color; 
+    -fx-background-color: -primary-color;
+
+    -fx-scale-y: 1.1;
+}
+.btnMenuAction:hover:pressed {
+    -fx-scale-y: 0.9;
+    -fx-scale-x: 0.9;
+}

@@ -1,0 +1,1103 @@
+<!DOCTYPE html>
+<!--This is simply an in-browser translation of report_French.html that was then downloaded as a complete webpage and slightly modified. It is not a perfect translation.-->
+
+<html lang="en">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deliverable 3 - Report</title>
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/base.css?v=02">
+    <style>
+        .report-header {
+            padding-top: 24px; padding-bottom: 24px;
+            background-color: #fff;
+        }
+
+        .title-section {
+            padding-left: 5vw;
+            padding-right: 5vw;
+        }
+
+        .report-title {
+            color: royalblue;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        .report-summary {
+            max-width: 800px;
+            font-size: 1.1em;
+            color: #555;
+        }
+        
+        .section-title {
+            margin-bottom: 6px;
+            text-transform: uppercase;
+            font-size: 2.4em; font-weight: 300;
+        }
+
+        .team-section {
+            padding-left: 5vw;
+            padding-right: 5vw;
+        }
+
+        .team-title {
+            font-weight: 500;
+            margin-bottom: 12px;
+            color: #1C3A94;
+        }
+
+        .members {
+            display: flex; flex-direction: row;
+        }
+
+        .member {
+            margin-top: 0px;
+            display: flex; flex-direction: column;
+        }
+        .member:not(:last-child) {
+            margin-right: 12px;
+        }
+
+        .member-pic {
+            display: block;
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+        }
+
+        .member-role {
+            font-size: 0.9em; font-weight: 500;
+            color: #555;
+        }
+
+        .report-body {
+            display: flex;
+        }
+
+        .report-aside {
+            padding-top: 24px;
+            padding-right: 12px;
+            padding-left: 5vw;
+            box-shadow: 1px 0 1px #999;
+        }
+
+        .report-main {
+            padding-left: 12px;
+            padding-right: 5vw;
+            padding-top: 24px;
+            width: 80%;
+        }
+
+        .nav {
+            color: #E87429;
+        }
+
+        .nav-item__link {
+            display: block;
+            padding: 6px;
+            text-decoration: none;
+        }
+
+        .glossary {
+            font-size: 1em;
+        }
+
+        .preview-img {
+            width: 600px;
+            height: 400px;
+        }
+
+        .report-footer {
+            background-color: #2C5EB4;
+            padding: 12px 5vw 24px;
+        }
+
+        .report-footer p {
+            margin: 0;
+        }
+
+        .report-footer__link {
+            color: #fff;
+        }
+
+        li{
+            margin-top: 25px;
+            /* border:1px solid grey; */
+        }
+
+        li:first-child {
+            margin-top:0;
+        }
+
+        .glossary-term {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="report-header">
+        <div class="title-section">
+            <h1 class="report-title">Deliverable 3 - Report</h1>
+            <p class="report-summary">
+                <br>
+				<font>
+				<b>
+				This is simply an in-browser translation of the French version of the report that was then downloaded as a complete webpage and slightly modified. It is not a 
+				perfect translation.
+				</b>
+				<br>
+				<br>
+				This deliverable focuses on the analysis, design and implementation of the 
+				VaxToDo:Re system based on the work done in deliverable 1. Specifically, the physical and conceptual requirements of the system were analyzed, and the 
+				system's performance was analyzed using activity diagrams. Then, a class diagram and sequence diagrams were used to design the system by paying 
+				attention to the classes, their interactions, their attributes and methods, and the order in which the classes interact with each other as a 
+				function of time. Finally, the system was implemented in Java, on the command line with a working prototype and a README user manual was written. 
+				Subsequently, a GUI interface was made with JavaFX, the diagrams were updated and unit tests were performed.
+				</font>
+			</p>
+        </div>
+
+        <div class="team-section">
+            <h2 class="team-title">Our team</h2>
+            <ul class="bare-list members">
+                <li class="member">
+                    <img class="member-pic" src="./images/louis.png" alt="">
+                    <div class="member-identification">
+                        <span class="member-name">Louis</span>
+                    </div>
+                </li>
+                <li class="member">
+                    <img class="member-pic" src="./images/christian.png" alt="">
+                    <div class="member-identification">
+                        <span class="member-name">Christian</span>
+                    </div>
+                </li>
+                <li class="member">
+                    <img class="member-pic" src="./images/mohamed.png" alt="">
+                    <div class="member-identification">
+                        <span class="member-name">Mohamed</span>
+                    <!--
+                </li-->
+            </div></li></ul>
+        </div>
+    </header>
+    <main class="report-body">
+        <aside class="report-aside">
+            <nav>
+                <ul class="bare-list nav">
+                    <li class="nav-item">
+                        <a class="nav-item__link" href="#plan">Planning</a> 
+                    </li>                               
+                    <li class="nav-item">               
+                        <a class="nav-item__link" href="#domain">Understanding the domain</a> 
+                    </li>                               
+                    <li class="nav-item">               
+                        <a class="nav-item__link" href="#model">Domain Modeling</a> 
+                    </li>                               
+                    <li class="nav-item">               
+                        <a class="nav-item__link" href="#analysis">Analysis</a> 
+                    </li>                               
+                    <li class="nav-item">               
+                        <a class="nav-item__link" href="#conception">Conception</a> 
+                    </li>                               
+                    <li class="nav-item">               
+                        <a class="nav-item__link" href="#prototype">Prototype of Assignment 1</a> 
+                    </li>                               
+                    <li class="nav-item">               
+                        <a class="nav-item__link" href="#implementation">Implementation</a> 
+                    </li>                               
+                    <li class="nav-item">               
+                        <a class="nav-item__link" href="#tests">Unit tests</a> 
+                    </li>                           
+                    <li class="nav-item">               
+                        <a class="nav-item__link" href="#annex">Annex</a> 
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+        <div class="report-main">
+            <section>
+                <h2 id="plan" class="section-title">Planning</h2>
+                <p>
+                    <font><u _istranslated="1"><b _istranslated="1">Brief description of the domain and problem</b></u> <br _istranslated="1"><br _istranslated="1"> The domain is the medical domain. The client does not know anything about computers. The client is the NPO GoodPeople which created the VaxTodo initiative, which vaccinates adults against COVID-19. <br _istranslated="1"><br _istranslated="1"> The problem is that the client has more and more problems meeting appointment dates and following up within an acceptable time frame. Our task is to create a system that will guarantee the periods of appointments booked and to facilitate the follow-up. </font><br><br>
+                </p>
+                <p>
+                    <font><u _istranslated="1"><b _istranslated="1">Prioritization</b></u> <br _istranslated="1"><br _istranslated="1"> Assignment 1: <br _istranslated="1"> We first prioritized text analysis, client interviews and glossary in order to fully understand the area and the problem. Next, we prioritized the use case diagram in order to have a good basis for writing scenarios. Subsequently, we prioritized the writing of the scenarios. Then we worked on the analysis of risks and non-functional needs. Subsequently, we worked on the paper prototype and the Java prototype. Finally, we have completed the report. <br _istranslated="1"><br _istranslated="1"> Assignment 2: <br _istranslated="1"> As with assignment 1, we first prioritized the analysis of the text in order to fully understand the problem. We then prioritized the analysis and correction of our Assignment 1, to ensure we were on the right track. Subsequently, we prioritized the design of the diagrams, in order to have a good understanding of how we were going to implement the system. It might have been easier to start with the activity diagram, but we started with the class diagram. We still worked on prototype at the same time prioritizing the design of classes, attributes, getters, setters and other methods without writing the methods in detail. After completing the diagrams, we worked on the prototype and wrote the material requirements, physical and conceptual requirements, and report. <br _istranslated="1"><br _istranslated="1"> Assignment 3: <br _istranslated="1"> As with homework 1 and 2, we first prioritized the analysis of the text in order to fully understand the problem. We then prioritized the analysis and correction of our assignment 2, to ensure we were on the right track. Subsequently, we prioritized the VaxToDo application, to ensure that we did not have to modify the diagrams, README and report several times. Then we did the tests, and then we finalized the README, the report, and the diagrams. </font><br><br>
+                </p>
+                <p>
+                    <font><u _istranslated="1"><b _istranslated="1">Exchanges with the client</b></u> <br _istranslated="1"><br _istranslated="1"> We had two meetings with the client. Before our first meeting, the client had already answered some questions from other developers. <br _istranslated="1"> At our first meeting, we asked four questions: </font></p><ul>
+                        <li><font>Are there any features you absolutely don't want to have? </font><ul>
+                                <li>The client has indicated that it does not wish to share vaccination data with any other authority.</li>
+                            </ul>
+                        </li>
+                        <li><font>What are your particular constraints regarding data storage, privacy (confidential medical information), etc.? </font><ul>
+                                <li>The client indicated that, for now, he wants to store the data on a computer at GoodPeople serving as a server, storing all the data at GoodPeople. The recordings will be stored on a text file on disk. Eventually, the client wants to migrate to a more robust solution.</li>
+                            </ul>
+                        </li>
+                        <li><font>Are there any potential risks you see (security of confidential data, vaccination, etc.)? </font><ul>
+                                <li>The client has indicated that they want us to analyze these risks and offer solutions. </li>
+                            </ul>
+                        </li>
+                        <li><font>What is your strategy after launching the system (maintenance, support, feature additions, etc.)? </font><ul>
+                                <li>The client indicated that it eventually wants to migrate to a more robust solution for data storage and possibly migrate from a command-line system to a system with a graphical interface.</li>
+                            </ul>
+                        </li>
+                        <li><font> We see potential risks with the data storage system. We understand that your budget is limited and that this solution is the best possible for the current budget. However, it would be important to ensure that the computer serving as a server is secure. It is important not to place the server in the same room as other computers. Is there a place where the computer could be placed where use could be restricted? For example, a room used only for the server and well secured, which unauthorized employees could not access? It must be ensured that the identity documents of anyone wishing to access it are verified, for example by an ID card in addition to physical keys. </font><ul>
+                                    <li>The client replied: You may be right, the server should be physically protected/isolated. If possible we would like to avoid having to resort to the consultant again. Our room has only one large room. Can you describe a simple solution? </li>
+                                </ul>
+                        </li>
+                    </ul>
+                    <br><font> One solution to this problem would be to keep the server locked, with only a few authorized employees having access to the key and ensuring that only certain employees have access to the server's system. This can be ensured with their 9-digit employee code, their usual password, as well as an additional password known by authorized employees to access the server. </font><br><br>
+                <p></p>
+                <p>
+                    <font><u _istranslated="1"><b _istranslated="1">Presentation of hypotheses</b></u> <br _istranslated="1"><br _istranslated="1"> It is assumed that the data saved on the server must have a backup. <br _istranslated="1"> It is assumed that the full functionality of the system must operate continuously during working hours. </font><br><br>
+                </p>
+            </section>
+
+            <section>
+                <h2 id="domain" class="section-title">Understanding the domain</h2>
+                <p> After many meetings and familiarization with the VaxTodo activity, we have prepared a glossary gathering the key terms and expressions characterizing the environment. </p>
+                <h3>Glossary</h3>
+                <dl class="glossary">
+                    <dt class="glossary-term">Employee</dt>
+                    <dd class="glossary-def">The employee is a member of the team working for VAX:TODO, he takes care of the appointment, visitors as well as their account and volunteers. Identified by surname, first name, address, telephone number, email address, 9-digit employee code and password.</dd>
+
+                    <br>
+
+                    <dt class="glossary-term">Volunteer</dt>
+                    <dd class="glossary-def">The volunteer is a team member working for VAX:TODO. He takes care of the reception of visitors and transports visitors to employees. It cannot access the system. Identified by surname, first name, address, telephone number and email address.</dd>
+
+                    <br>
+
+                    <dt class="glossary-term">Visitor</dt>
+                    <dd class="glossary-def">A "client" of VAX:TODO. It can be a visitor with appointment or a spontaneous visitor (no appointment). <br _istranslated="1"><br _istranslated="1"> <span style="border-bottom: 1px dotted #000; text-decoration: none;" _istranslated="1">Synonym:</span> Person </dd>
+
+                    <br>
+
+                    <dt class="glossary-term">Appointment</dt>
+                    <dd class="glossary-def">Appointment for the visit of a vaccine. Must be taken 72 hours in advance. <br _istranslated="1"><br _istranslated="1"> <span style="border-bottom: 1px dotted #000; text-decoration: none;" _istranslated="1">Synonym:</span> Reservation (reservation for the appointment) </dd>
+
+                    <br>
+
+                    <dt class="glossary-term">Reservation number</dt>
+                    <dd class="glossary-def">Unique product number when booking an appointment</dd>
+
+                    <br>
+
+                    <dt class="glossary-term">System</dt>
+                    <dd class="glossary-def">"Software" used by employees for the management of appointments, employees and visitors.</dd>
+
+                    <br>
+
+                    <dt class="glossary-term">Vaccine</dt>
+                    <dd class="glossary-def">The main objective of VAX:TODO, to allocate vaccines. Identified by name, code and batch. Four types: Pfizer, Moderna, AstraZeneca, Jenssen. <br _istranslated="1"><br _istranslated="1"> <span style="border-bottom: 1px dotted #000; text-decoration: none;" _istranslated="1">Synonym:</span> Vaccination </dd>
+
+                    <br>
+                    
+                    <dt class="glossary-term">Server</dt>
+                    <dd class="glossary-def">Where the data will be stored. For now the server is on a computer in the room.</dd>
+
+                    <br>
+
+                    <dt class="glossary-term">Account</dt>
+                    <dd class="glossary-def">One account per visitor, containing all the necessary information about it. <br _istranslated="1"><br _istranslated="1"> <span style="border-bottom: 1px dotted #000; text-decoration: none;" _istranslated="1">Synonym:</span> Folder </dd>
+
+                    <br>
+
+                    <dt class="glossary-term">Phantom account</dt>
+                    <dd class="glossary-def">Unused account. These accounts should be avoided.</dd>
+
+                    <br>
+
+                    <dt class="glossary-term">Unique twelve-digit number</dt>
+                    <dd class="glossary-def">Unique number attached to a visitor's account. <br _istranslated="1"><br _istranslated="1"> <span style="border-bottom: 1px dotted #000; text-decoration: none;" _istranslated="1">Synonym:</span> Account number </dd>
+
+                    <br>
+
+                    <dt class="glossary-term">Email address</dt>
+                    <dd class="glossary-def">Unique to each visitor, volunteer and employee, registered in the visitor's account.</dd>
+
+                    <br>
+
+                    <dt class="glossary-term">Personal information</dt>
+                    <dd class="glossary-def">Surname, first name, date of birth address and telephone number of the visitor, registered in the visitor's account. <br _istranslated="1"><br _istranslated="1"> <span style="border-bottom: 1px dotted #000; text-decoration: none;" _istranslated="1">Synonym:</span> Data </dd>
+
+                    <br>
+
+                    <dt class="glossary-term">Health insurance card number</dt>
+                    <dd class="glossary-def">Unique number of any person registered in the Québec health care system. Requested when confirming the appointment.</dd>
+
+                    <br>
+
+                    <dt class="glossary-term">Vaccination report </dt>
+                    <dd class="glossary-def">Report containing the details of each vaccination. Can optionally be sent by email to the visitor concerned.</dd>
+
+                    <br>
+
+                    <dt class="glossary-term">Vaccination profile</dt>
+                    <dd class="glossary-def">Profile that gathers information related to vaccines received for each visitor account telling: dose type, vaccine identification, date and time of vaccination.</dd>
+
+                    <br>
+
+                    <dt class="glossary-term">9-digit employee code </dt>
+                    <dd class="glossary-def">Unique identifier for each employee to access the system</dd>
+
+                    <br>
+
+                    <dt class="glossary-term">Password</dt>
+                    <dd class="glossary-def">A series of characters unique to each employee that allows authentication to access the system. Composed of at least 8 characters containing at least 1 number, 1 uppercase, 1 lowercase and 1 special character.</dd>
+
+                    <br>
+
+                    <dt class="glossary-term">Healthcare Professional</dt>
+                    <dd class="glossary-def">People who give the vaccines. They are not part of the GoodPeople team. Goodpeople only takes care of reserving them a space in the room. <br _istranslated="1"><br _istranslated="1"> <span style="border-bottom: 1px dotted #000; text-decoration: none;" _istranslated="1">Synonym:</span> Vaccinators, chargers, injectors </dd>
+
+                    <br>
+
+                    <dt class="glossary-term">Local</dt>
+                    <dd class="glossary-def">Where vaccines are given. Maximum capacity of 40 people, excluding health professionals and the team.</dd>
+
+                    <br>
+
+                    <dt class="glossary-term">Planned visit</dt>
+                    <dd class="glossary-def">Visit by a visitor to GoodPeople for vaccination, whose visit was planned in advance by making an appointment.</dd>
+
+                    <br>
+
+                    <dt class="glossary-term">Spontaneous visit</dt>
+                    <dd class="glossary-def">Visit by a visitor to GoodPeople for vaccination, whose visit is spontaneous by presenting himself on site, without an appointment made in advance.</dd>
+
+                    <br>
+
+                    <dt class="glossary-term">Questionnaire</dt>
+                    <dd class="glossary-def">Paper form given to visitors containing necessary information related to the client.</dd>
+
+                    <br>
+
+                    <dt class="glossary-term">Proof of vaccination </dt>
+                    <dd class="glossary-def">A PDF containing all the information of the vaccine that the visitor has received. It is sent by email within the next 48 hours by the employee. <br _istranslated="1"><br _istranslated="1"> <span style="border-bottom: 1px dotted #000; text-decoration: none;" _istranslated="1">Synonym:</span> Vaccination Report, Vaccination Profile </dd>
+
+                    <br>
+
+                    <dt class="glossary-term">QR code</dt>
+                    <dd class="glossary-def">Matrix barcode unique to the vaccinated visitor sent with proof of vaccination.</dd>
+
+                    <br>
+
+                    <dt class="glossary-term">Calendar</dt>
+                    <dd class="glossary-def">The calendar indicates the possible availability for a new appointment and indicates each appointment.</dd>
+
+                    <br>
+
+                    <dt class="glossary-term">Dose</dt>
+                    <dd class="glossary-def">A unit of vaccine administered at a particular time. There are two doses. The second dose shall be given at least one month after the first dose.</dd>
+                    
+                    <br>
+
+                    <dt class="glossary-term">Team</dt>
+                    <dd class="glossary-def">A group of people working at GoodPeople made up of employees and volunteers.</dd>
+
+                    <br>
+
+                    <dt class="glossary-term">Calendar</dt>
+                    <dd class="glossary-def">File where the appointments booked are grouped with their date and time, the full name of the visitor and the reservation number.</dd>
+
+                    <br>
+
+                    <dt class="glossary-term">Appointment confirmation</dt>
+                    <dd class="glossary-def">Message sent by email to the visitor in order to confirm that the information of the appointment.</dd>
+
+                    <br>
+
+                    <dt class="glossary-term">Processing of the file</dt>
+                    <dd class="glossary-def">Create, edit, and delete visitor profiles, associated appointments, vaccination profiles, and appointment confirmations.</dd>
+                </dl>
+            </section>
+
+            <section>
+                <h2 id="model" class="section-title">Domain Modeling</h2>
+                <p>Use case</p>
+                <a href="VPP/all_vpp_diagrams.vpp" target="_blank" download="">
+                    <img src="./images/Diagramme CU v3.png" alt="" style="width: 50%; height: 50%">
+                    
+                </a>
+
+                <p>Scenarios</p>
+                <ul style="text-decoration: none;">
+                    <li>
+                        <font><u _istranslated="1"><b _istranslated="1">Use Case: </b>Appointment</u> <br _istranslated="1"><br _istranslated="1"> Creation <b _istranslated="1">Purpose: </b>A person wishes to make an appointment to be vaccinated at GoodPeople <br _istranslated="1"><br _istranslated="1"> <b _istranslated="1">Preconditions: </b>The employee has an account authorizing him to make appointment reservations. <br _istranslated="1"><br _istranslated="1"> <b _istranslated="1">Cast: </b>Person (main), Employee (secondary) <br _istranslated="1"><br _istranslated="1"> <b _istranslated="1"><span style="border-bottom: 1px dotted #000; text-decoration: none;" _istranslated="1">Main script</span></b></font>
+                        <br>
+                        <ol>
+                            <li>A person calls GoodPeople to make an appointment to get vaccinated.</li>
+                            <li>The employee asks the person for the date and time they want to make the appointment.</li>
+                            <li>The employee checks whether this time slot is valid or available in the calendar.</li>
+                            <li>The employee asks for his information (surname, first name, type of dose, email).</li>
+                            <li>The system confirms the appointment booking.</li>
+                        </ol>
+                        <br><br>
+                        <b><span style="border-bottom: 1px dotted #000; text-decoration: none;">Alternative scenarios</span></b>
+                        <br>
+                        <ul style="text-decoration: none;">
+                            <li><font> 3a. The time slot desired by the client is not available. </font><ul style="text-decoration: none;">
+                                    <li>3a.1 The employee shall ask the person for another date and time. He can suggest one close to the one he just said just before.</li>
+                                    <li>3a.2 The scenario resumes in Step 3.</li>
+                                </ul>
+                            </li>
+                            <li><font> 9a. The date given by the person is in less than 72 hours. </font><ul style="text-decoration: none;">
+                                    <li>9b.1 The employee shall ask the person for another date and time that is more than 72 hours away.</li>
+                                    <li>9b.2 The scenario resumes in Step 3.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <br><br>
+                        <font><b _istranslated="1">Postconditions: </b> Details containing the first name, last name, booking number, dose type, as well as the date and time of the appointment are saved. These details are emailed to the individual. </font></li>
+                    <br>
+                    <li>
+                        <font><u _istranslated="1"><b _istranslated="1">Use Case: </b>Appointment</u><br _istranslated="1"><br _istranslated="1"> Modification <b _istranslated="1">Purpose: </b>To allow a person to change their appointment to get vaccinated at GoodPeople. <br _istranslated="1"><br _istranslated="1"><b _istranslated="1">Preconditions: </b>The employee has an account authorizing him to modify appointment reservations. <br _istranslated="1"><br _istranslated="1"><b _istranslated="1">Cast: </b>Visitor (main), Employee (secondary)<br _istranslated="1"><br _istranslated="1"><b _istranslated="1"><span style="border-bottom: 1px dotted #000; text-decoration: none;" _istranslated="1">Main script</span></b></font><br>
+                        <ol>
+                            <li>A visitor contacts GoodPeople by phone to change their appointment</li>
+                            <li>The employee asks the visitor for their reservation number, full name, dose type, and the date and time of their new appointment.</li>
+                            <li>The visitor provides this information.</li>
+                            <li>The employee checks whether this time slot is valid or available in the calendar.</li>
+                            <li>The employee confirms the request with the visitor.</li>
+                            <li>The visitor confirms that he wishes to change his appointment.</li>
+                            <li>The main menu of the system prompts to choose an option.</li>
+                            <li>The employee chooses "List of appointments".</li>
+                            <li>The system displays the list of appointments and prompts to choose an option.</li>
+                            <li>The employee verifies that the appointment is present in the list.</li>
+                            <li>The employee chooses "Modification".</li>
+                            <li>The system prompts you to choose the appointment to change.</li>
+                            <li>The employee chooses the appointment to be changed.</li>
+                            <li>The system displays the data entered in the appointment and prompts to confirm the change.</li>
+                            <li>The employee changes the information entered with the information provided by the visitor.</li>
+                            <li>The employee chooses "Edit".</li>
+                            <li>The system changes the appointment.</li>
+                            <li>The system displays the change confirmation.</li>
+                        </ol>
+                        <br><br><b><span style="border-bottom: 1px dotted #000; text-decoration: none;">Alternative scenarios</span></b><br>
+                        <ul style="text-decoration: none;">
+                            <li><font> 3a. The time slot desired by the client is not available. </font><ul style="text-decoration: none;">
+                                    <li>3a.1 The employee shall ask the person for another date and time. He can suggest one close to the one he just said just before.</li>
+                                    <li>3a.2 The scenario resumes in Step 3.</li>
+                                </ul>
+                            </li>
+                            <li><font> 10a. The appointment is not present in the list. </font><ul style="text-decoration: none;">
+                                    <li>10a.1 The employee asks the person to repeat their account information (booking number, full name, date and time of their appointment) checking that there are no errors.</li>
+                                    <li>10a.2 If the new information is present in the "Appointment List", the scenario resumes in step 10.</li>
+                                    <li>10a.3 If the new information is still not present in the "Appointment List", the employee invites the visitor to create a new appointment. </li>
+                                </ul>
+                            </li>
+                            <li><font> 14a. The visitor does not want to change the appointment (no valid date for the next appointment or distant date in the future, etc.) </font><ul style="text-decoration: none;">
+                                    <li>14a.1 The employee confirms to the user that the appointment will not be changed.</li>
+                                    <li>14a.2 The scenario ends.</li>
+                                </ul>
+                            </li>
+                            <li><font> 16a. The employee chooses "Do not modify". </font><ul style="text-decoration: none;">
+                                    <li>16a.1 The employee confirms to the user that the appointment will not be changed.</li>
+                                    <li>16a.2 The scenario resumes in Step 16.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <br><br><font><b _istranslated="1">Postconditions: </b> The appointment is changed. A confirmation message of the new appointment is sent by email to the visitor. </font></li>
+                    <br>
+                    <li>
+                        <font><u _istranslated="1"><b _istranslated="1">Use Case: </b>Appointment</u><br _istranslated="1"><br _istranslated="1"> Deletion <b _istranslated="1">Purpose: </b>Allow a person to cancel their appointment to get vaccinated at GoodPeople<br _istranslated="1"><br _istranslated="1"><b _istranslated="1">Preconditions: </b>The employee has an account authorizing them to cancel appointment reservations. <br _istranslated="1"><br _istranslated="1"><b _istranslated="1">Cast: </b>Visitor (main), Employee (secondary)<br _istranslated="1"><br _istranslated="1"><b _istranslated="1"><span style="border-bottom: 1px dotted #000; text-decoration: none;" _istranslated="1">Main script</span></b></font><br>
+                        <ol>
+                            <li>A visitor contacts GoodPeople to cancel their appointment to get vaccinated.</li>
+                            <li>The employee asks the visitor for his name, as well as the date and time of his appointment.</li>
+                            <li>The visitor indicates this information.</li>
+                            <li>The employee confirms the request with the visitor.</li>
+                            <li>The visitor confirms that he wishes the cancellation of his appointment.</li>
+                            <li>The main menu of the system prompts to choose an option.</li>
+                            <li>The employee chooses "List of appointments".</li>
+                            <li>The system displays the list of appointments and prompts to choose an option.</li>
+                            <li>The employee verifies that the appointment is present in the list.</li>
+                            <li>The employee chooses "Delete".</li>
+                            <li>The system prompts you to choose the appointment to delete.</li>
+                            <li>The employee chooses the appointment to delete.</li>
+                            <li>The system displays the data entered in the appointment and prompts to confirm the deletion.</li>
+                            <li>The employee chooses "Delete".</li>
+                            <li>The system deletes the appointment.</li>
+                            <li>The system displays the deletion confirmation.</li>
+                        </ol>
+                        <br><br><b><span style="border-bottom: 1px dotted #000; text-decoration: none;">Alternative scenarios</span></b><br>
+                        <ul style="text-decoration: none;">
+                            <li><font> 8a. The visitor changes his mind and does not want to cancel the appointment. </font><ul style="text-decoration: none;">
+                                    <li>8a.1 The employee confirms to the user that the appointment will not be deleted.</li>
+                                    <li>8a.2 The scenario ends.</li>
+                                </ul>
+                            </li>
+                            <li><font> 9a. The appointment is not present in the list. </font><ul style="text-decoration: none;">
+                                    <li>9a.1 The employee shall ask the person to repeat his or her name and the date and time of his or her appointment, verifying that there are no errors.</li>
+                                    <li>9a.2 The scenario resumes in Step 3.</li>
+                                </ul>
+                            </li>
+                            <li><font> 14a. The employee chooses "Do not delete". </font><ul style="text-decoration: none;">
+                                    <li>14a.1 The scenario resumes in Step 8.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <br><br><font><b _istranslated="1">Postconditions: </b> The appointment is deleted. A confirmation message of the cancellation of the appointment is sent by email to the visitor. </font></li>
+                    <br>
+                    <li>
+                        <font><u _istranslated="1"><b _istranslated="1">Use Case: </b>Appointment</u><br _istranslated="1"><br _istranslated="1"> Confirmation <b _istranslated="1">Purpose: </b>Allow the employee to send an appointment confirmation <b _istranslated="1">Preconditions</b><br _istranslated="1"><br _istranslated="1">: The employee has an account that allows them to access and edit visitor account information. <br _istranslated="1"><br _istranslated="1"><b _istranslated="1">Actors: </b>Employee (main), Visitor (secondary)<br _istranslated="1"><br _istranslated="1"><b _istranslated="1"><span style="border-bottom: 1px dotted #000; text-decoration: none;" _istranslated="1">Main scenario</span></b></font><br>
+                        <ol>
+                            <li>When creating, editing, or deleting an appointment, the employee has the option to check or uncheck a "Sent confirmation" checkbox in the appointment menu. The check box is selected by default.</li>
+                            <li>For any future modification or deletion of the appointment and as long as the box "Send a confirmation during an update" is checked, a confirmation will be automatically sent to the visitor.</li>
+                            <li>The employee decides to send a manual confirmation using a "Send confirmation now" button located near the check box. </li>
+                            <li>The system displays a preview of the email that will be sent and asks for confirmation of the sending.</li>
+                            <li>The employee agrees by pressing "Send it as is to the visitor [reservation number, full name]".</li>
+                            <li>The system sends an email to the visitor detailing the information of his account as well as the status of the confirmation (automatic update, manual deletion of the account by such employee, etc.).</li>
+                            <li>The system displays the confirmation of the sending of the email. </li>
+                        </ol>
+                        <br><br><b><span style="border-bottom: 1px dotted #000; text-decoration: none;">Alternative scenarios</span></b><br>
+                        <ul style="text-decoration: none;">
+                            <li><font>4a. The employee chooses "Do not send". </font><ul style="text-decoration: none;">
+                                    <li>4a.1 The scenario resumes in Step 3.</li>
+                                </ul>
+                            </li>
+                            <li><font>7a. Shipment fails </font><ul style="text-decoration: none;">
+                                    <li>7a.1 The system displays that the shipment ended in failure and displays the error code.</li>
+                                    <li>7a.2 The scenario resumes in Step 4. </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <br><br><font><b _istranslated="1">Postconditions: </b> A confirmation email is sent to the visitor reminding them of the status of their appointment (added, modified or cancelled). </font></li>
+                    <br>
+                    <li>
+                        <font><u _istranslated="1"><b _istranslated="1">Use Case: </b>Creating a Volunteer</u><br _istranslated="1"><br _istranslated="1"> Account <b _istranslated="1">Purpose: </b>A volunteer wants to help GoodPeople and participates in the vaccination campaign as a volunteer. <br _istranslated="1"><br _istranslated="1"><b _istranslated="1">Preconditions: </b>The employee has an account authorizing him to create volunteers in the system<br _istranslated="1"><br _istranslated="1"><b _istranslated="1">Actors: </b>Volunteer (primary), Employee (secondary)<br _istranslated="1"><br _istranslated="1"><b _istranslated="1"><span style="border-bottom: 1px dotted #000; text-decoration: none;" _istranslated="1">Main scenario</span></b></font><br>
+                        <ol>
+                            <li>A volunteer comes to the reception indicating that he wants to be a volunteer.</li>
+                            <li>He is redirected to an employee to create an account for him.</li>
+                            <li>The employee asks for his information (surname, first name, email, address, telephone number, as well as his availability to come to the premises). </li>
+                            <li>The system validates the information.</li>
+                            <li>The system confirms the creation of the volunteer's account.</li>
+                        </ol>
+                        <br><br><b><span style="border-bottom: 1px dotted #000; text-decoration: none;">Alternative scenarios</span></b><br>
+                        <ul style="text-decoration: none;">
+                            <li><font>The system rejects the client's email, because there is already an account with this address </font><ul style="text-decoration: none;">
+                                    <li>4a.1 The system asks the employee to enter a new email</li>
+                                    <li>4a.2 The scenario resumes in Step 5</li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <br><br><font><b _istranslated="1">Postconditions: </b> The volunteer is saved in the system. </font></li>
+                    <br>
+                    <li>
+                        <font><u _istranslated="1"><b _istranslated="1">Use Case: </b>Modifying a Volunteer</u><br _istranslated="1"><br _istranslated="1"> Account <b _istranslated="1">Purpose: </b>Allowing the Modification of a Volunteer <br _istranslated="1"><br _istranslated="1"> Account Information <b _istranslated="1">Preconditions: </b>The employee has an account authorizing him to modify the volunteer accounts in the system<br _istranslated="1"><br _istranslated="1"><b _istranslated="1">Actors: </b>Volunteer (primary), Employee (secondary)<br _istranslated="1"><br _istranslated="1"><b _istranslated="1"><span style="border-bottom: 1px dotted #000; text-decoration: none;" _istranslated="1">Main scenario</span></b></font><br>
+                        <ol>
+                            <li>The main menu of the system prompts to choose an option.</li>
+                            <li>The employee chosen "List of volunteers".</li>
+                            <li>The system displays the list of volunteers and prompts for an option.</li>
+                            <li>The employee chooses "Modification".</li>
+                            <li>The system prompts you to choose the volunteer to edit.</li>
+                            <li>The employee chooses the volunteer to modify.</li>
+                            <li>The system displays the volunteer's data and prompts to confirm the change.</li>
+                            <li>The employee replaces the registered information with the information provided by the volunteer.</li>
+                            <li>The employee chooses "Edit".</li>
+                            <li>The system changes the volunteer's information.</li>
+                            <li>The system displays the change confirmation. </li>
+                        </ol>
+                        <br><br><b><span style="border-bottom: 1px dotted #000; text-decoration: none;">Alternative scenarios</span></b><br>
+                        <ul style="text-decoration: none;">
+                            <li><font>8a. Volunteer does not want to change account information </font><ul style="text-decoration: none;">
+                                    <li>8a.1 The employee confirms to the volunteer that his/her account information will not be changed.</li>
+                                    <li>8a.2 The scenario ends.</li>
+                                </ul>
+                            </li>
+                            <li><font>4a. The information provided is not present in the list. </font><ul style="text-decoration: none;">
+                                    <li>4a.1 The employee shall ask the volunteer to repeat his or her account information, verifying that there are no errors.</li>
+                                    <li>4a.2 If the new information is present in the "Volunteer List", the scenario resumes in step 4.</li>
+                                    <li>4a.3 If the new information is still not present in the "Volunteer List", the employee invites the volunteer to create a new account. </li>
+                                </ul>
+                            </li>
+                            <li><font>9a. The employee chooses "Do not modify". </font><ul style="text-decoration: none;">
+                                    <li>9a.1 The employee confirms to the volunteer that the information will not be changed.</li>
+                                    <li>9a.2 The scenario resumes in Step 9.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <br><br><font><b _istranslated="1">Postconditions: </b> The volunteer's information is changed. </font></li>
+                    <br>
+                    <li>
+                        <font><u _istranslated="1"><b _istranslated="1">Use Case: </b>Deleting a Volunteer</u><br _istranslated="1"><br _istranslated="1"> Account <b _istranslated="1">Purpose: </b>A volunteer can be deleted if they stop collaborating with VaxTodo<br _istranslated="1"><br _istranslated="1"><b _istranslated="1">Preconditions: </b>The employee has an account authorizing them to delete a volunteer's account. The volunteer stops collaborating with VaxTodo. <br _istranslated="1"><br _istranslated="1"><b _istranslated="1">Cast: </b>Volunteer (main), Employee (secondary)<br _istranslated="1"><br _istranslated="1"><b _istranslated="1"><span style="border-bottom: 1px dotted #000; text-decoration: none;" _istranslated="1">Main script</span></b></font><br>
+                        <ol>
+                            <li>The main menu of the system prompts to choose an option.</li>
+                            <li>The employee chosen "List of volunteers".</li>
+                            <li>The system displays the list of volunteers and prompts for an option.</li>
+                            <li>The employee chooses "Delete".</li>
+                            <li>The system prompts you to choose the volunteer to delete.</li>
+                            <li>The employee chooses the volunteer to delete.</li>
+                            <li>The system displays the volunteer's data and prompts to confirm the deletion.</li>
+                            <li>The employee chooses "Delete".</li>
+                            <li>The system removes the volunteer.</li>
+                            <li>The system displays the deletion confirmation. </li>
+                        </ol>
+                        <br><br><b><span style="border-bottom: 1px dotted #000; text-decoration: none;">Alternative scenarios</span></b><br>
+                        <ul style="text-decoration: none;">
+                            <li><font>5a. The employee chooses "Do not delete". </font><ul style="text-decoration: none;">
+                                    <li>5a.1 The scenario resumes in Step 3.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <br><br><font><b _istranslated="1">Postconditions: </b> The volunteer is deleted. </font></li>
+                    <br>
+                    <li>
+                        <font><u _istranslated="1"><b _istranslated="1">Use case: </b>Creation of a Visitor</u><br _istranslated="1"><br _istranslated="1"> account <b _istranslated="1">Purpose: </b>A person who comes to be vaccinated must have an account. <br _istranslated="1"><br _istranslated="1"><b _istranslated="1">Preconditions: </b>The employee has an account authorizing him to create the account of a visitor who comes to be vaccinated. The person went through the queue and was called by an employee. <br _istranslated="1"><br _istranslated="1"><b _istranslated="1">Cast: </b>Visitor (main), Employee (secondary)<br _istranslated="1"><br _istranslated="1"><b _istranslated="1"><span style="border-bottom: 1px dotted #000; text-decoration: none;" _istranslated="1">Main script</span></b></font><br>
+                        <ol>
+                            <li>The visitor presents himself at the employee's office</li>
+                            <li>The employee confirms his appointment with his name and the time of the visit. </li>
+                            <li>The employee then asks for his personal information (surname, first name, address, telephone number, email, date of birth)</li>
+                            <li>The employee enters the information into the system</li>
+                            <li>The system validates the information</li>
+                            <li>The system confirms the creation of the account and displays the unique number of the account.</li>
+                            <li>The agent communicates the unique number of his account. </li>
+                        </ol>
+                        <br><br><b><span style="border-bottom: 1px dotted #000; text-decoration: none;">Alternative scenarios</span></b><br>
+                        <ul style="text-decoration: none;">
+                            <li>5a. The system rejects the client's email, because there is already an account with this address</li>
+                        </ul>
+                        <br><br><font><b _istranslated="1">Postconditions: </b> The visitor's account is saved. </font></li>
+                    <br>
+                    <li>
+                        <font><u _istranslated="1"><b _istranslated="1">Use Case: </b>Modifying a Visitor</u><br _istranslated="1"><br _istranslated="1"> Account <b _istranslated="1">Purpose: </b>Allowing the modification of a visitor<br _istranslated="1"><br _istranslated="1"> account information <b _istranslated="1">Preconditions: </b>The employee has an account authorizing him to delete a visitor's account. If the visitor requests a change to their account in person, they have gone through the queue and been called by an employee. <br _istranslated="1"><br _istranslated="1"><b _istranslated="1">Cast: </b>Visitor (main), Employee (secondary)<br _istranslated="1"><br _istranslated="1"><b _istranslated="1"><span style="border-bottom: 1px dotted #000; text-decoration: none;" _istranslated="1">Main script</span></b></font><br>
+                        <ol>
+                            <li>The visitor contacts VaxTodo by email, phone or in person and requests the modification of his account. </li>
+                            <li>The employee confirms the request with the visitor.</li>
+                            <li>The visitor confirms that he wishes to change his account.</li>
+                            <li>The main menu of the system prompts to choose an option.</li>
+                            <li>The employee chooses "List of Visitor Accounts".</li>
+                            <li>The system displays the list of accounts and prompts to choose an option.</li>
+                            <li>The employee chooses "Modification".</li>
+                            <li>The system prompts to choose the account to be modified.</li>
+                            <li>The employee chooses the account to change.</li>
+                            <li>The system displays the data entered in the account and prompts to confirm the change.</li>
+                            <li>The employee replaces the account information with the information provided by the visitor.</li>
+                            <li>The employee chooses "Edit".</li>
+                            <li>The system changes the account information.</li>
+                            <li>The system displays the change confirmation.</li>
+                        </ol>
+                        <br><br><b><span style="border-bottom: 1px dotted #000; text-decoration: none;">Alternative scenarios</span></b><br>
+                        <ul style="text-decoration: none;">
+                            <li><font>3a. The visitor does not want to change their account information </font><ul style="text-decoration: none;">
+                                    <li>3a.1 The employee confirms to the visitor that his account information will not be changed.</li>
+                                    <li>3a.2 The scenario ends.</li>
+                                </ul>
+                            </li>
+                            <li><font>6a. The information provided is not present in the list. </font><ul style="text-decoration: none;">
+                                    <li>6a.1 The employee asks the visitor to repeat his account information by checking that there are no errors.</li>
+                                    <li>6a.2 If the new information is present in the "Visitor Account List", the scenario resumes in step 6.</li>
+                                    <li>6a.3 If the new information is still not present in the "Visitor Account List", the employee invites the visitor to create a new account. </li>
+                                </ul>
+                            </li>
+                            <li><font>12a. The employee chooses "Do not modify". </font><ul style="text-decoration: none;">
+                                    <li>12a.1 The employee confirms to the visitor that the information will not be changed.</li>
+                                    <li>12a.2 The scenario resumes in Step 12.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <br><br><font><b _istranslated="1">Postconditions: </b> The visitor's account information is changed. </font></li>
+                    <br>
+                    <li>
+                        <font><u _istranslated="1"><b _istranslated="1">Use Case: </b>Deleting a Visitor</u><br _istranslated="1"><br _istranslated="1"> Account <b _istranslated="1">Purpose: </b>A visitor's account can be deleted at the visitor's request. <br _istranslated="1"><br _istranslated="1"><b _istranslated="1">Preconditions: </b>The employee has an account authorizing him to delete a visitor's account. If the visitor requests the deletion of their account in person, they have gone through the queue and been called by an employee. <br _istranslated="1"><br _istranslated="1"><b _istranslated="1">Cast: </b>Visitor (main), Employee (secondary)<br _istranslated="1"><br _istranslated="1"><b _istranslated="1"><span style="border-bottom: 1px dotted #000; text-decoration: none;" _istranslated="1">Main script</span></b></font><br>
+                        <ol>
+                            <li>The visitor contacts VaxTodo by email, phone or in person and requests the deletion of his account. </li>
+                            <li>The employee confirms the request with the visitor and tells him that the deletion is final.</li>
+                            <li>The visitor confirms that he wishes to delete his account.</li>
+                            <li>The main menu of the system prompts to choose an option.</li>
+                            <li>The employee chooses "List of Visitor Accounts".</li>
+                            <li>The system displays the list of accounts and prompts to choose an option.</li>
+                            <li>The employee chooses "Delete".</li>
+                            <li>The system prompts to choose the account to delete.</li>
+                            <li>The employee chooses the account to delete.</li>
+                            <li>The system displays the data entered in the account and prompts to confirm the deletion.</li>
+                            <li>The employee chooses "Delete".</li>
+                            <li>The system deletes the account.</li>
+                            <li>The system displays the deletion confirmation.</li>
+                        </ol>
+                        <br><br><b><span style="border-bottom: 1px dotted #000; text-decoration: none;">Alternative scenarios</span></b><br>
+                        <ul style="text-decoration: none;">
+                            <li><font>3a. The visitor changes his mind and does not want to delete the account. </font><ul style="text-decoration: none;">
+                                    <li>3a.1 The employee confirms to the user that the account will not be deleted.</li>
+                                    <li>3a.2 The scenario ends.</li>
+                                </ul>
+                            </li>
+                            <li><font>11a. The employee chooses "Do not delete". </font><ul style="text-decoration: none;">
+                                    <li>11a.1 The scenario resumes in Step 6. </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <br><br><font><b _istranslated="1">Postconditions: </b> The visitor's account is deleted. </font></li>
+                    <br>
+                    <li>
+                        <font><u _istranslated="1"><b _istranslated="1">Use Case: </b>Vaccination</u><br _istranslated="1"><br _istranslated="1"> Tracking <b _istranslated="1">Purpose: </b>The purpose of vaccination tracking is to email the vaccination report to the visitor and remind them of the date of their next appointment if applicable. <br _istranslated="1"><br _istranslated="1"><b _istranslated="1">Preconditions: </b>The employee has an account to send the follow-up to the visitor. The employee holds the visitor's information. <br _istranslated="1"><br _istranslated="1"><b _istranslated="1">Cast: </b>Visitor (main), Employee (secondary)<br _istranslated="1"><br _istranslated="1"><b _istranslated="1"><span style="border-bottom: 1px dotted #000; text-decoration: none;" _istranslated="1">Main script</span></b></font><br>
+                        <ol>
+                            <li>The visitor has just been vaccinated and leaves the premises.</li>
+                            <li>The employee selects the visitor's account </li>
+                            <li>Employee selects option to send email notification</li>
+                            <li>The system displays a confirmation that the package leaflet has been sent.</li>
+                        </ol>
+                        <br><br><b><span style="border-bottom: 1px dotted #000; text-decoration: none;">Alternative scenarios</span></b><br>
+                        <ul style="text-decoration: none;">
+                            <li><font>3a. The vaccination profile has not yet been created. </font><ul style="text-decoration: none;">
+                                    <li>3a.1 The scenario ends. </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <br><br><font><b _istranslated="1">Postconditions: </b> A small sentence indicates on the visitor's profile that the follow-up was done on this account. </font></li>
+                    <br>
+                    <li>
+                        <font><u _istranslated="1"><b _istranslated="1">Use Case: </b>Interview and Questionnaire</u><br _istranslated="1"><br _istranslated="1"><b _istranslated="1">Purpose: </b>When a person shows up for their appointment, an employee asks for certain information. <br _istranslated="1"><br _istranslated="1"><b _istranslated="1">Preconditions: </b>The employee has an account that allows them to access and modify visitors' account information. <br _istranslated="1"><br _istranslated="1"><b _istranslated="1">Actors: </b>Person (main), Employee (secondary)<br _istranslated="1"><br _istranslated="1"><b _istranslated="1"><span style="border-bottom: 1px dotted #000; text-decoration: none;" _istranslated="1">Main script</span></b></font><br>
+                        <ol>
+                            <li>A person in line for his appointment is called by the employee.</li>
+                            <li>The employee accesses the list of appointments in the system.</li>
+                            <li>The employee asks the person for the name and time of the appointment.</li>
+                            <li>The person indicates this information.</li>
+                            <li>The employee confirms the appointment.</li>
+                            <li>The employee is in the appointment-specific questionnaire from the list of appointments.</li>
+                            <li>The employee completes the questionnaire by asking the person for their surname, first name, the date of the visit and which vaccine they want to receive.</li>
+                            <li>The person indicates this information.</li>
+                            <li>The employee goes on to ask for her sickness card, writes down the number and asks if she has ever contracted COVID, if she has symptoms of COVID and if she has allergies.</li>
+                            <li>The person shows their health card and answers no to all these questions.</li>
+                            <li>The employee asks if she has ever received a first dose.</li>
+                            <li>The person says yes.</li>
+                            <li>The employee saves the questionnaire, gives the person a numbered ticket and directs them to the queue.</li>
+                        </ol>
+                        <br><br><b><span style="border-bottom: 1px dotted #000; text-decoration: none;">Alternative scenarios</span></b><br>
+                        <ul style="text-decoration: none;">
+                            <li><font>5a. There is no scheduled appointment with this information. </font><ul style="text-decoration: none;">
+                                    <li>5a.1 The employee invites the person to make an appointment.</li>
+                                    <li>5a.2 The scenario ends.</li>
+                                </ul>
+                            </li>
+                            <li><font>10a. The person does not have a valid health insurance card and/or answers yes to one or more of these questions. </font><ul style="text-decoration: none;">
+                                    <li>10a.1 The employee informs the person that VaxTodo cannot vaccinate him or her and tells him or her to contact INFO-SANTÉ.</li>
+                                    <li>10a.2 The scenario ends.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <br><br><font><b _istranslated="1">Postconditions: </b> The questionnaire is saved and sent to health professionals. </font></li>
+                    <br>
+                    <li>
+                        <font><u _istranslated="1"><b _istranslated="1">Use Case: </b>Adding a vaccination profile to a visitor's</u><br _istranslated="1"><br _istranslated="1"> account <b _istranslated="1">Purpose: </b>Update a visitor's account after they have received the vaccine. <br _istranslated="1"><br _istranslated="1"><b _istranslated="1">Preconditions: </b>The employee has an account that allows them to access and modify visitors' account information. <br _istranslated="1"><br _istranslated="1"><b _istranslated="1">Actors: </b>Employee (main), Visitor (secondary)<br _istranslated="1"><br _istranslated="1"><b _istranslated="1"><span style="border-bottom: 1px dotted #000; text-decoration: none;" _istranslated="1">Main scenario</span></b></font><br>
+                        <ol>
+                            <li>After the visitor has received their vaccine, the employee creates a vaccination profile that contains all the information related to the vaccines received (dose type, vaccine identification, date and time of vaccination).</li>
+                            <li>In the "List of Visitor Accounts" menu, the employee chooses the visitor in question.</li>
+                            <li>From the visitor's menu, the employee chooses the "Add a vaccination profile" option. </li>
+                            <li>The employee fills in the input fields with the vaccination information (account number, date, dose type, vaccine name, vaccine code, vaccine lot).</li>
+                            <li>The employee chooses to add the profile with "Save this profile". </li>
+                            <li>The system returns a confirmation of the profile backup.</li>
+                            <li>The employee chosen "Add".</li>
+                            <li>The system adds the profile and updates the visitor's account.</li>
+                            <li>The system sends an email confirmation to the visitor.</li>
+                        </ol>
+                        <br><br><b><span style="border-bottom: 1px dotted #000; text-decoration: none;">Alternative scenarios</span></b><br>
+                        <ul style="text-decoration: none;">
+                            <li><font>2a. Visitor account information is not present in the list. </font><ul style="text-decoration: none;">
+                                    <li>2a.1 The employee asks the visitor to repeat his account information checking that there are no errors.</li>
+                                    <li>2a.2 If the new information is present in the "Visitor Account List", the scenario resumes in step 2.</li>
+                                    <li>2a.3 If the new information is still not present in the "Visitor Account List", the employee invites the visitor to create a new account. </li>
+                                </ul>
+                            </li>
+                            <li><font>6a. The information entered by the employee is not in the correct format. </font><ul style="text-decoration: none;">
+                                    <li>6a.1 The system indicates to correct the information entered.</li>
+                                    <li>6a.2 The scenario resumes in Step 4.</li>
+                                </ul>
+                            </li>
+                            <li><font>7a. The employee chooses "Do not add". </font><ul style="text-decoration: none;">
+                                    <li>7a.1 The scenario resumes in Step 4.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <br><br><font><b _istranslated="1">Postconditions: </b> The vaccination profile is added to the visitor's account. The visitor receives an email confirmation. </font></li>
+                    <br>
+                    <li>
+                        <font><u _istranslated="1"><b _istranslated="1">Use Case: </b>Check Calendar</u><br _istranslated="1"><br _istranslated="1"><b _istranslated="1">Purpose: </b>Check a day's calendar to see scheduled appointments. <br _istranslated="1"><br _istranslated="1"><b _istranslated="1">Preconditions: </b>The employee has an account authorizing him to access the appointment calendar. <br _istranslated="1"><br _istranslated="1"><b _istranslated="1">Cast: </b>Employee (main)<br _istranslated="1"><br _istranslated="1"><b _istranslated="1"><span style="border-bottom: 1px dotted #000; text-decoration: none;" _istranslated="1">Main screenplay</span></b></font><br>
+                        <ol>
+                            <li>The employee selects the option to view the calendar</li>
+                            <li>The employee chooses the day for which he or she wishes to see the calendar.</li>
+                            <li>The calendar of the day is displayed with all bookings and times.</li>
+                        </ol>
+                    </li>
+                    <br>
+                    <li>
+                        <font><u _istranslated="1"><b _istranslated="1">Use Case: </b>Print Calendar</u><br _istranslated="1"><br _istranslated="1"><b _istranslated="1">Purpose: </b>Print the appointment calendar to give to volunteers. <br _istranslated="1"><br _istranslated="1"><b _istranslated="1">Preconditions: </b>The employee has an account authorizing him to access the appointment calendar. <br _istranslated="1"><br _istranslated="1"><b _istranslated="1">Cast: </b>Employee (main), Volunteer (secondary)<br _istranslated="1"><br _istranslated="1"><b _istranslated="1"><span style="border-bottom: 1px dotted #000; text-decoration: none;" _istranslated="1">Main script</span></b></font><br>
+                        <ol>
+                            <li>Upon arrival in the morning, the employee selects the option to print the calendar.</li>
+                            <li>The employee chooses the number of copies to print.</li>
+                            <li>The employee is returned to the main menu.</li>
+                            <li>The employee then distributes copies of the calendar to the volunteers.</li>
+                        </ol>
+                    </li>
+                </ul>
+            </section>
+
+            <section>
+                <h2 id="analysis" class="section-title">Analysis</h2>
+                <p> Our preliminary analysis allowed us to analyze the risks and non-functional requirements of VaxxTodo:Re. It also allowed us to analyze the material needs and physical and conceptual constraints of VaxToDo:Re. Finally, it allowed us to analyze the behavior of the system using dynamic analysis models: activity diagrams. </p>
+                <div>
+                    <h3>Risks</h3><font> Classification according to the severity of the risk. </font><ol class="risks">
+                        <li>
+                            <font><u _istranslated="1">Risk of giving a dose of vaccine to a person who is not supposed to have one.</u> <br _istranslated="1"> <br _istranslated="1"> This risk is the most severe, as giving a dose of vaccine to a person who is allergic to the vaccine, is already infected with COVID, or giving one dose too many can cause very serious side effects or can even be fatal in the worst case. </font></li>
+                        <li>
+                            <font><u _istranslated="1">There could be a leak of confidential information of system users saved in the server, including medical data, if it was poorly secured.</u> <br _istranslated="1"> <br _istranslated="1"> This risk is severe, as highly confidential information, such as the date of vaccination, the type of vaccine and the number of visitors' health insurance card are saved. A leak could allow some to illegally obtain visitors' vaccination passports, steal their identities or harass them. </font></li>
+                        <li>
+                            <font><u _istranslated="1">Corruption of the text file stored on the server disk, containing all the system data, could cause permanent data loss.</u> <br _istranslated="1"> <br _istranslated="1"> This risk is severe, as all accounts, appointments, passwords, vaccination information, etc. would be lost. This would cause serious delays, cancellation or postponement of appointments and other problems. It could also cause some patients to not be able to access their vaccination passport. </font></li>
+                        <li>
+                            <font><u _istranslated="1">Improper use or saving of the questionnaire could result in a person being vaccinated with the wrong vaccine. </u> <br _istranslated="1"> <br _istranslated="1"> For example, if a bug caused a problem with the questionnaire data and the questionnaire received by healthcare professionals had the wrong type of vaccine selected. This risk is significant, as it could violate the visitor's fundamental right to choice of treatment. </font></li>
+                        <li>
+                            <font><u _istranslated="1">If vaccination information is poorly saved, visitors may not have access to their vaccination passport.</u> <br _istranslated="1"> <br _istranslated="1"> For example, if a bug caused a visitor's vaccination to be recorded as another visitor's vaccination or not recorded at all. This risk is significant because without a vaccine passport, a person would not be able to travel, access certain non-essential services or even work in some cases. </font></li>
+                    </ol>
+                </div>
+                <div>
+                    <h3>Non-functional requirements</h3>
+                    <ul class="nf-requirements">
+                        <li>The interface should be intuitive and easy to interact with.</li>
+                        <li>The system must be used by multiple employees and the data must be available during multiple access.</li>
+                        <li>The system must be flexible for future changes such as supporting new specifications or commenting on the source code for ease of use by future new young programmers.</li>
+                        <li>Visitors' personal information must be kept secure.</li>
+                        <li>The employee code must be unique and have 9 digits. </li>
+                        <li>Employee passwords must be unique and be composed of minus 8 characters containing at least 1 digit, 1 uppercase, 1 lowercase and 1 special character.</li>
+                        <li>The full functionality of the system must be constantly functional during working hours.</li>
+                        <li>The system must comply with privacy laws and protect information from malicious actors. </li>
+                        <li>The documentation must be enlightened and easy to understand for the proper maintenance of the software in the future.</li>
+                        <li>The backed up data must remain intact. They should not be accidentally modified due to bugs.</li>
+                        <li>The system must run on a variety of work environments.</li>
+                        <li>The system must allow emails to be sent directly from the system.</li>
+                        <li>The system should not be heavy in terms of disk size and it should be easy to carry and install.</li>
+                        <li>The system should not be expensive to develop and maintain.</li>
+                        <li>The system must support different languages and localizations (French, English, etc.).</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Material requirements</h3>
+                    <h4>1. Party to be computerised</h4>
+                    <p> Since this is a small-volume application and the budget is limited, the best option is to use an interactive mode with on-site computers that will be used by employees. The part of appointment management (and calendar), account management of the volunteer and the visitor as well as the follow-up and vaccination report for each visitor will be computerized. </p>
+                    <h4>2. Necessary equipment</h4>
+                    <p>
+                        </p><ul class="nf-requirements">
+                        <li> Computers on site. Since this is a rather simple software that does not require too much power, computers do not necessarily have to be very powerful. </li>
+                        <li> Internal and external hard drives (optionally, to have copies). </li>
+                        <li> Printer to be able to print calendars. Since these are not images that require very high quality, a jet or laser printer will do the job. However, we will recommend a laser printer, as this would be much more economical in the long run (more printing with a single cartridge). </li>
+                    </ul>
+                    <p></p>
+                    <h4>3. Storage solution</h4>
+                    <p> There will be a database that will save with the help of rows and columns all the important data and necessary for the use of the software. <br _istranslated="1"> The data will be stored in the src/Data/ folder in .csv format. <br _istranslated="1"> Everything will be saved on the hard drive of the computer and it will be possible to easily transfer the data to an external hard drive to have "back-ups". </p>
+                </div>
+                <div>
+                    <h3>Physical and conceptual constraints</h3>
+                    <p> There are a maximum of 15 visits per one-hour time slot (8am, 9am, ..., 4pm, 5pm), so a maximum of 150 visits per day, a maximum of 5 parallel visits, lasting 30 to 45 minutes each and a maximum of 40 visitors to the premises at the same time. The premises are open 10 hours a day, from 8am to 6pm. GoodPeople has a dozen computers, one of which will serve as a server. <br _istranslated="1"> <br _istranslated="1"> VaxToDo:Re, models and views have a size of <strong _istranslated="1">~500 KB</strong>. <br _istranslated="1"> There are 8 csv files with an initial size of <strong _istranslated="1">~50-140 B</strong>. <br _istranslated="1"> Each new item saved in a csv file takes <strong _istranslated="1">~25-130 B</strong> depending on the number of boxes saved. <br _istranslated="1"> An employee or volunteer account takes <strong _istranslated="1">~130 B</strong>. <br _istranslated="1"> Assuming that the total number of employees and volunteers is about 22 (because there are a dozen computers and one of them is used as a server, the premises are open 10 hours / day, 5 days / week, so 50 hours / week and it is assumed that the average working hours of employees and volunteers is 25 hours / week),  the total initial size of employee and volunteer accounts is <strong _istranslated="1">~3.2 KB</strong>. <br _istranslated="1"> Thus, the initial size of the system (Java + csv) before taking into account visitors would be <strong _istranslated="1">~1.3 MB</strong>. <br _istranslated="1"> Since a time slot lasts one hour and is limited to 15 appointments, assuming the worst case where each new appointment is a first visit, so where you have to create a new visitor account each time, you have to create 15 items per hour in the csv files Visitors, Follow-upVaccination, Appointments, ReportsVaccination, Interviews, Calendars. The maximum input volume per hour is therefore <strong _istranslated="1">~9.6 KB/h</strong>. <br _istranslated="1"> There are 10 one-hour time slots per day (8am, 9am, ..., 4pm, 5pm). The maximum input volume per day is therefore <strong _istranslated="1">~96 KB/day</strong>. <br _istranslated="1"> The premises are open 5 days/week, there are at most 22 weekdays (Monday to Friday) per month. The maximum input volume per month is therefore <strong _istranslated="1">~2.1 MB/month</strong>. <br _istranslated="1"> There are no more than 252 non-statutory holiday weekdays in a year (if leap). The maximum volume of entries per year is therefore <strong _istranslated="1">~532 MB/year</strong>. <br _istranslated="1"> <br _istranslated="1"> The hard disk of the server must have <strong _istranslated="1">at least 4 GB</strong> to have an operating system such as a <strong _istranslated="1">"mini Linux"</strong> system that can handle the command line, files and sending emails, and contain the equivalent of at least four years (~2 GB) of data. <br _istranslated="1"> Employees' and volunteers' computers must have <strong _istranslated="1">hard drives of at least 1 GB</strong> to use a <strong _istranslated="1">"mini Linux"</strong> operating system that can handle the command line and a connection to the server. <br _istranslated="1"> If GoodPeople eventually plans to increase its amount of employees, volunteers and visitors, add features to the system such as a graphical interface, etc., hard drives should be have more storage space. In this case, in order to take into account all possible situations, we would recommend <strong _istranslated="1">hard drives of at least 32 GB</strong> for each computer with a modern operating system such as <strong _istranslated="1">Linux Mint or Windows 10</strong>. </p>
+                </div>
+                <div>
+                    <h3>Dynamic Model: Activity Diagrams</h3>
+                    <h4>1. Main loop</h4>
+                        <a href="VPP/get="_blank" download="">
+                            <img src="./images/diag_activ_1_boucle_princ.png" alt="" style="width: 60%; height: 60%">
+                        </a>
+                    <h4>2. Timeline</h4>
+                        <a href="VPP/all_vpp_diagrams.vpp" target="_blank" download="">
+                            <img src="./images/diag_activ_2_calendrier.png" alt="" style="width: 45%; height: 45%">
+                        </a>
+                    <h4>3. Volunteer Management</h4>
+                        <a href="VPP/all_vpp_diagrams.vpp" target="_blank" download="">
+                            <img src="./images/diag_activ_3_gestion_benev.png" alt="" style="width: 80%; height: 80%">
+                        </a>
+                    <h4>4. Loop appointment</h4>
+                        <a href="VPP/all_vpp_diagrams.vpp" target="_blank" download="">
+                            <img src="./images/diag_activ_4_gestion_rdv.png" alt="" style="width: 80%; height: 80%">
+                        </a>
+                    <h4>5. Visitor Loop</h4>
+                        <a href="VPP/all_vpp_diagrams.vpp" target="_blank" download="">
+                            <img src="./images/diag_activ_5_gestion_vis.png" alt="" style="width: 80%; height: 80%">
+                        </a>
+                </div>
+            </section>
+            
+            <section>
+                <h2 id="conception" class="section-title">Conception</h2>
+                <p> Our design allowed us to have a good understanding of how we were going to implement the VaxToDo:Re system, the classes and their interactions, the attributes, the methods and the order in which they interact with each other as a function of time. </p>
+                <div>
+                    <h3>Justification of design choices: Abstraction, coupling and cohesion</h3>
+                    <p> We aim for high cohesion. Our classes have limited special purposes. Each class has its own purpose. The majority of classes and interfaces have only one specific task. The VaxTodo interface has three: the management of appointments and accounts of volunteers and visitors. The menu takes care of displaying the text on the screen and allowing the user to select the menu options. Employees and volunteers have a code and password and interact with the menu. Visitor is used to manage visitors, their vaccination report and questionnaire. The latter two are implemented by classes that have only one identifier as well as attributes equivalent to the questions asked. Follow-upVaccination is used to manage the follow-up of the vaccination, including the sending of the vaccination reminder. <br _istranslated="1"> <br _istranslated="1"> We are aiming for a low coupling. We minimize relationships and dependency between classes. Changing something in one of the classes does not affect the others. The majority of classes have a connection with the Employe class, some also with Benevole, as volunteers have restricted access. Some have a link to Visitor, only when the visitor is involved in the task for which the class serves. The rest are implementation relationships for the interface and inheritence relationships for the Person class. <br _istranslated="1"> <br _istranslated="1"> The Person class is used by Employe, Benevole, and Visitor, because several attributes are used by the other three classes. Also, the VaxTodo interface is implemented by Employe and Benevole, who use the system, and by Menu, which calls its methods when the user selects an option. We initially had a second Calendar interface with the printCalendrier() method and implemented by RendezVous, but we decided to simply place the method in RendezVous and return the list of appointments. </p>
+                </div>
+                <div>
+                    <h3>Class diagram</h3>
+                        <a href="VPP/all_vpp_diagrams.vpp" target="_blank" download="">
+                            <img src="./images/diag_classes.png" alt="" style="width: 100%; height: 100%">
+                        </a>
+                </div>
+                <div>
+                    <h3>Sequence diagrams</h3>
+                    <h4>1. Creation of a Visitor</h4>
+                        <a href="VPP/seq.vpp" target="_blank" download="">
+                            <img src="./images/Diagramme_sequence_1_crea_vis.png" alt="" style="width: 90%; height: 90%">
+                        </a>
+                    <h4>2. Modification of a Visitor</h4>
+                        <a href="VPP/seq.vpp" target="_blank" download="">
+                            <img src="./images/Diagramme_sequence_2_modi_vis.png" alt="" style="width: 90%; height: 90%">
+                        </a>
+                    <h4>3. Delete from a Visitor</h4>
+                        <a href="VPP/seq.vpp" target="_blank" download="">
+                            <img src="./images/Diagramme_sequence_3_suppr_vis.png" alt="" style="width: 90%; height: 90%">
+                        </a>
+                    <h4>4. Appointment creation</h4>
+                        <a href="VPP/seq.vpp" target="_blank" download="">
+                            <img src="./images/Diagramme_sequence_4_crea_rdv.png" alt="" style="width: 90%; height: 90%">
+                        </a>
+                    <h4>5. Adding a vaccination profile to a visitor's account</h4>
+                        <a href="VPP/seq.vpp" target="_blank" download="">
+                            <img src="./images/Diagramme_sequence_5_ajout_profil.png" alt="" style="width: 90%; height: 90%">
+                        </a>
+                </div>
+            </section>
+
+            <section>
+                <h2 id="prototype" class="section-title">Prototype of Assignment 1</h2>
+                <ul class="bare-list previews">
+                    <li class="preview">
+                        <img class="preview-img" src="./images/prototypejava_1.png" alt="" style="width: 70%; height: 70%">
+                        <br><font> Main menu. <br _istranslated="1"> The user is prompted to select an option. </font></li>
+                    <li class="preview">
+                        <img class="preview-img" src="./images/prototypejava_2.PNG" alt="" style="width: 50%; height: 50%">
+                        <br><font> The user is in the 'List of appointments' menu </font></li>
+                    <li class="preview">
+                        <img class="preview-img" src="./images/prototypejava_3.PNG" alt="" style="width: 50%; height: 50%">
+                        <br><font> The user is in the 'Edit Appointment' menu </font></li>
+                    <li class="preview">
+                        <img class="preview-img" src="./images/prototypejava_4.PNG" alt="" style="width: 50%; height: 50%">
+                        <br><font> The user is in the 'Appointment Change' menu and wants to change the appointment time. <br _istranslated="1"> He must choose the time of the appointment. </font></li>
+                    <li class="preview">
+                        <img class="preview-img" src="./images/prototypejava_5.PNG" alt="" style="width: 50%; height: 50%">
+                        <br><font> The user is in the 'Appointment Change' menu and wants to change the appointment time. <br _istranslated="1"> He must choose the desired minute. </font></li>
+                    <li class="preview">
+                        <img class="preview-img" src="./images/prototypejava_6.PNG" alt="" style="width: 50%; height: 50%">
+                        <br><font> The appointment time has been successfully changed. <br _istranslated="1"> Back to the previous menu. </font></li>
+                
+            </ul></section>
+            
+            <section>
+                <h2 id="implementation" class="section-title">Implementation</h2>
+                <div>
+                    <h3>Prototype of duty 2 on the command line</h3>
+                    <ul class="bare-list previews">
+                        <li class="preview">
+                            <img class="preview-img" src="./images/1.png" alt="" style="width: 50%; height: 50%">
+                            <br><font> Login menu <br _istranslated="1"> The user is prompted to choose between employee and volunteer login. </font></li>
+                        <li class="preview">
+                            <img class="preview-img" src="./images/2.png" alt="" style="width: 50%; height: 50%">
+                            <br><font> Employee login menu <br _istranslated="1"> The employee is prompted to enter their identification code and password. The system verifies that the data entered is in Data/Employes.csv. </font></li>
+                        <li class="preview">
+                            <img class="preview-img" src="./images/3.png" alt="" style="width: 50%; height: 50%">
+                            <br><font> Employee Main Menu <br _istranslated="1"> The employee is prompted to select an option. The employee's account number and identification number are visible at the top. It can log out by entering "-" and exit the app with "!". </font></li>
+                        <li class="preview">
+                            <img class="preview-img" src="./images/4.png" alt="" style="width: 50%; height: 50%">
+                            <br><font> Employee Management Menu <br _istranslated="1"> The employee is prompted to select an option. It can go back by entering "+". </font></li>
+                        <li class="preview">
+                            <img class="preview-img" src="./images/5.png" alt="" style="width: 90%; height: 90%">
+                            <br><font> The employee enters "1" to choose the option list all employees. <br _istranslated="1"> The menu displays validation errors in case the data in the csv file does not follow the format (in red), and then the list of valid employees. </font></li>
+                        <li class="preview">
+                            <img class="preview-img" src="./images/6.png" alt="" style="width: 50%; height: 50%">
+                            <br><font> Add Employee <br _istranslated="1"> menu The employee is prompted to enter the new employee's identification code. The account number is generated automatically. He will then have to enter other information. </font></li>
+                        <li class="preview">
+                            <img class="preview-img" src="./images/7.png" alt="" style="width: 50%; height: 50%">
+                            <br><font> Visitor management menu similar to that of volunteer management. <br _istranslated="1"> The employee is prompted to select an option. </font></li>
+                        <li class="preview">
+                            <img class="preview-img" src="./images/8.png" alt="" style="width: 50%; height: 50%">
+                            <br><font> Volunteer management menu similar to that of visitor management. <br _istranslated="1"> The employee is prompted to select an option. </font></li>
+                        <li class="preview">
+                            <img class="preview-img" src="./images/9.png" alt="" style="width: 90%; height: 90%">
+                            <br><font> The employee enters "1" to choose the option list all employees. <br _istranslated="1"> The menu displays validation errors if the data in the csv file does not follow the format, and then the list of valid volunteers. </font></li>
+                        <li class="preview">
+                            <img class="preview-img" src="./images/10.png" alt="" style="width: 50%; height: 50%">
+                            <br><font> Appointment management menu similar to that of volunteer management. <br _istranslated="1"> The employee is prompted to select an option. </font></li>
+                        <li class="preview">
+                            <img class="preview-img" src="./images/11.png" alt="" style="width: 70%; height: 70%">
+                            <br><font> The employee enters "1" to choose the option to list all appointments. <br _istranslated="1"> The menu displays validation errors if the data in the csv file does not follow the format, and then the list of valid appointments. </font></li>
+                        <li class="preview">
+                            <img class="preview-img" src="./images/12.png" alt="" style="width: 70%; height: 70%">
+                            <br><font> The employee enters "5" to choose the option to send an appointment confirmation. <br _istranslated="1"> The list of appointments is displayed and the employee is asked to select the appointment for which a confirmation must be sent. </font></li>
+                        <li class="preview">
+                            <img class="preview-img" src="./images/13.png" alt="" style="width: 70%; height: 70%">
+                            <br><font> The system asks to confirm the sending of the appointment confirmation. <br _istranslated="1"> The employee is asked to select Y (yes) or n (no). </font></li>
+                        <li class="preview">
+                            <img class="preview-img" src="./images/14.png" alt="" style="width: 50%; height: 50%">
+                            <br><font> Confirmation of sending the appointment confirmation to the visitor's email address. <br _istranslated="1"> Back to the previous menu. </font></li>
+                        <li class="preview">
+                            <img class="preview-img" src="./images/15.png" alt="" style="width: 50%; height: 50%">
+                            <br><font> Calendar menu <br _istranslated="1"> The employee is prompted to select an option. </font></li>
+                        <li class="preview">
+                            <img class="preview-img" src="./images/16.png" alt="" style="width: 40%; height: 40%">
+                            <br><font> The employee enters "-" and is thus disconnected. <br _istranslated="1"> Back to the login menu. </font></li>
+                        <li class="preview">
+                            <img class="preview-img" src="./images/17.png" alt="" style="width: 50%; height: 50%">
+                            <br><font> The employee enters "!" and exits the application. <br _istranslated="1"> Termination of the application. </font></li>
+                    
+                </ul></div>
+                <div>
+                    <h3>Application with GUI in JavaFX</h3>
+                    <ul class="bare-list previews">
+                        <li class="preview">
+                            <img class="preview-img" src="./images/fx1.png" alt="" style="width: 50%; height: 50%">
+                            <br><font> Login menu <br _istranslated="1"> The unilizer is prompted to choose between employee and volunteer login. It can exit the application by selecting Exit. </font></li>
+                        <li class="preview">
+                            <img class="preview-img" src="./images/fx2.png" alt="" style="width: 50%; height: 50%">
+                            <br><font> Employee Main Menu <br _istranslated="1"> The employee is prompted to select an option. The employee's name, account number and identification number are visible at the top. It can log out by selecting Logout and return to the previous menu by selecting Back. </font></li>
+                        <li class="preview">
+                            <img class="preview-img" src="./images/fx3.png" alt="" style="width: 50%; height: 50%">
+                            <br><font> Employee Management Menu <br _istranslated="1"> The employee is prompted to select an option or enter information. </font></li>
+                        <li class="preview">
+                            <img class="preview-img" src="./images/fx4.png" alt="" style="width: 50%; height: 50%">
+                            <br><font> Volunteer management menu. <br _istranslated="1"> The employee is prompted to select an option or enter information. </font></li>
+                        <li class="preview">
+                            <img class="preview-img" src="./images/fx5.png" alt="" style="width: 50%; height: 50%">
+                            <br><font> Visitor management menu. <br _istranslated="1"> The employee is prompted to select an option or enter information. </font></li>
+                        <li class="preview">
+                            <img class="preview-img" src="./images/fx6.png" alt="" style="width: 50%; height: 50%">
+                            <br><font> Calendar menu <br _istranslated="1"> The employee is prompted to select an option or enter information. </font></li>
+                        <li class="preview">
+                            <img class="preview-img" src="./images/fx7.png" alt="" style="width: 50%; height: 50%">
+                            <br><font> Form menu <br _istranslated="1"> The employee is prompted to select an option or enter information. </font></li>
+                    
+                </ul></div>
+            </section>
+                
+            <section>
+                <h2 id="tests" class="section-title">Unit tests</h2>
+                <div>
+                    <h3>Screenshots of the six unit tests</h3>
+                    <ul class="bare-list previews">
+                        <li class="preview">
+                            <img class="preview-img" src="./images/test1.png" alt="" style="width: 90%; height: 90%">
+                            <br><font> Two tests for class AES_GCM_Athentification <br _istranslated="1"> Tests password encryption by testing that the encrypted password is not equal to the password entered in string and tests password decryption by testing that the decrypted password is equal to the password entered in string. </font></li>
+                        <li class="preview">
+                            <img class="preview-img" src="./images/test2.png" alt="" style="width: 90%; height: 90%">
+                            <br><font> Two tests for the Form <br _istranslated="1"> class Tests that the values of the form have been correctly passed to the Subclass of type Visitor and tests that the values of the superclass of type Form are equal to those of the subclass of type Visitor. </font></li>
+                        <li class="preview">
+                            <img class="preview-img" src="./images/test3.png" alt="" style="width: 90%; height: 90%">
+                            <br><font> Two tests for the Benevole <br _istranslated="1">class t Tests that a volunteer already created (benevoleToTest) has exactly the same values as a volunteer that we create on the spot and tests that if we enter only an account number for the volunteer created on the spot that is the same as that of benevoleToTest, their account numbers are equal. </font></li>
+                </ul></div>
+            </section>
+			
+            <section>
+                <h2 id="annex" class="section-title">Annex</h2>
+                <div>
+                    <h3>Jira</h3>
+                    <ul class="bare-list previews">
+                        <li class="preview">
+                            <img class="preview-img" src="./images/Jira.png" alt="" style="width: 70%; height: 70%">
+                            <br><font> Our Jira board. <br _istranslated="1"> We used Jira to manage the ticks with sprints. </font></li>
+        </ul></div>
+    </section></div></main>
+    <footer class="report-footer">
+        <p>
+           <a class="link report-footer__link" href="VPP/all_vpp_diagrams.vpp" target="_blank" download="">Link to CU, activity and class diagrams</a></p>
+           <a class="link report-footer__link" href="VPP/seq.vpp" target="_blank" download="">Link to sequence diagrams</a><p></p>
+    </footer>
+
+
+</body></html>
