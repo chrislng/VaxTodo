@@ -2,11 +2,21 @@
 
 Vaccination-scheduling GUI application prototype created with two teammates for a Software Engineering class.
 
+Project website: https://chrislng.github.io/VaxTodo/
+
 ![sped_up_VaxTodo_create_new_employee_and_login](./doc/assets/gif/sped_up_VaxTodo_create_new_employee_and_login.gif)
 
 The application UI is in French, while the code itself is in English.
 
-The `\doc\` folder includes the JavaDoc, the Class, Activity and Sequence UML Diagrams done with Visual Paradigm inside the `\VPP\` folder, and the final report, translated to English, containing information about the Use Cases, the UML diagrams, some JUnit Unit Tests, and the JIRA Scrum board, along with other information.
+The `\doc\` folder includes the JavaDoc, the Class, Activity and Sequence UML Diagrams done with Visual Paradigm inside the `\VPP\` folder, the specifications, and the final report, translated to English, containing information about the Use Cases, the UML diagrams, some JUnit Unit Tests, and the JIRA Scrum board, along with other information. It also includes the website files.
+
+[Javadoc Documentation](https://chrislng.github.io/VaxTodo/JavaDoc/index.html)
+
+[Specifications in html form](https://chrislng.github.io/VaxTodo/specifications.html)
+
+[Specifications in markdown form](./doc/specifications.md)
+
+[Project Report](https://chrislng.github.io/VaxTodo/report.html)
 
 ## Features
 
