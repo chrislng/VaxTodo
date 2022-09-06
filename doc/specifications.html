@@ -21,7 +21,7 @@
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-light fixed-top shadow-sm" id="mainNav">
             <div class="container px-5">
-                <a class="navbar-brand fw-bold" href="./index.html"><img class="nav-logo" src="./assets/img/VaxTodo_handmaid_logo_v5-colorized.png">VaxTodo</a>
+                <a class="navbar-brand fw-bold" href="./index.html"><img class="nav-logo" src="./assets/img/VaxTodo_handmaid_logo_v5-colorized.png" alt="VaxTodo Logo">VaxTodo</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Menu
                     <i class="bi-list"></i>
@@ -31,13 +31,13 @@
                         <li class="nav-item"><a class="nav-link me-lg-3" href="https://github.com/chrislng/VaxTodo">GitHub</a></li>
                         <li class="nav-item"><a class="nav-link me-lg-3" href="./JavaDoc/index.html">Javadoc</a></li>
                         <li class="nav-item"><a class="nav-link me-lg-3" href="./specifications.html">Specifications</a></li>
-                        <li class="nav-item"><a class="nav-link me-lg-3" href="./project_report_English_translation.html">Project Report</a></li>
+                        <li class="nav-item"><a class="nav-link me-lg-3" href="./report.html">Project Report</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
         <!-- Mashead header-->
-        <header class="masthead">
+        <header class="masthead" style="padding-bottom: 0 !important;">
             <div class="container px-5">
                 <div class="row gx-5 align-items-center">
                     <div>
@@ -47,148 +47,163 @@
                             <p class="lead fw-normal text-muted mb-4">
                                 These are the specifications, translated from French, that were given by the professor for a fictional client company.
                             </p>
-                            <h2 class="display-4 lh-1 mb-4">Constraints</h2>
-                            <p class="lead fw-normal text-muted mb-4">
-                                <ul class="lead fw-normal text-muted mb-4">
-                                    <li>Calendar: No more than 15 entries/visits per time slot (8am, 9am, 10am...5pm).</li>
-                                    <li>Schedule: Monday to Friday from 8am to 6pm.</li>
-                                    <li>Appointments: Minimum 72 hours in advance and maximum 2 people.</li>
-                                </ul>
-                            </p>
-                            <h2 class="display-4 lh-1 mb-4">Visit</h2>
-                            <p class="lead fw-normal text-muted mb-4">
-                                When a person arrives at the reception desk, a volunteer checks to see if he or she 
-                                has an appointment, using his or her reservation number and validating his or her 
-                                name and appointment time in the system. If the person does not have an appointment 
-                                or is late, the volunteer checks the calendar for available times. The volunteer 
-                                confirms the period with the visitor and proceeds to add the visitor to the calendar 
-                                at the selected period by indicating his name and phone number. If a person who has 
-                                made an appointment arrives at the reception desk more than 15 minutes late, the 
-                                appointment is automatically cancelled by the system and the person is considered 
-                                a spontaneous visitor. The volunteer then proceeds to select an available period.
-                                <br>
-                                <br>
-                                When making the appointment, the employee uses the system to access the calendar 
-                                to choose a date and time with the person. When the person confirms the choice to 
-                                the employee, the employee makes the reservation and adds a scheduled visit to the 
-                                calendar. The appointment details are emailed to the visitor, who can use them during 
-                                their visit to confirm their appointment.
-                                <ul class="lead fw-normal text-muted mb-4">
-                                    <li>Reservation number: 6 digits</li>
-                                    <li>First name: 50 character limit</li>
-                                    <li>Last name: 50 character limit</li>
-                                    <li>Date of visit Accepted format: YYYY-MM-DD</li>
-                                    <li>Time of visit Accepted format: HH:mm</li>
-                                    <li>Dose type: (1, 2)</li>
-                                </ul>
-                            </p>
-                            <h2 class="display-4 lh-1 mb-4">Interview and Follow-Up</h2>
-                            <p class="lead fw-normal text-muted mb-4">
-                                During the interview with the employee, in the case of a scheduled visit, the employee 
-                                asks for his reservation number and confirms his visit in the system. In the case of a 
-                                spontaneous visit, the employee verifies that his name and phone number are present in 
-                                the calendar at the time of the visit. The employee then asks for his or her account 
-                                number to proceed with the questionnaire. If the visitor does not have his account 
-                                number, he can provide his email address and date of birth to find it.
-                                <br>
-                                <br>
-                                The employee asks for the visitor's health insurance card and completes a 
-                                questionnaire with the visitor in the system. If the visitor does not have a health 
-                                card or if it has expired, the visit is cancelled and the employee invites the visitor 
-                                to make a new appointment.
-                                <br>
-                                <br>
-                                In the case of a first dose, the employee asks the visitor if they would like to 
-                                schedule a second dose. If so, the employee proceeds to schedule the appointment. The 
-                                appointment must be made within a minimum of one month.
-                                <br>
-                                <br>
-                                The employee then prints and signs the form to be completed by a health care 
-                                professional. During the day, an employee collects the completed forms and completes 
-                                the visitor's vaccination profile. If the visitor has been vaccinated, an email is 
-                                sent to the visitor containing the proof of vaccination in the form of a PDF document. 
-                                The proof of vaccination contains the visitor's name, date of birth, a QR code and 
-                                their vaccination profile listing the vaccinations given. At the end of the day, the 
-                                employee retrieves the list of scheduled visits for the next 48 hours and sends an 
-                                email notification, reminding everyone of their upcoming appointment.
-                            </p>
-                            <h2 class="display-4 lh-1 mb-4">Form</h2>
-                            <p class="lead fw-normal text-muted mb-4">
-                                <ul class="lead fw-normal text-muted mb-4">
-                                    <li>Account number: 12 digits</li>
-                                    <li>First name: 50 character limit</li>
-                                    <li>Last name: 50 character limit</li>
-                                    <li>Date of birth Accepted format: YYYY-MM-DD</li>
-                                    <li>Health insurance card number: Entered without spaces</li>
-                                    <li>Have you ever received a first dose? Accepted answer: Yes, No</li>
-                                    <li>Have you ever had COVID? Answer accepted: Yes, No</li>
-                                    <li>Do you have any symptoms of COVID? Answer accepted: Yes, No</li>
-                                    <li>Do you have any allergies? Answer accepted: Yes, No</li>
-                                    <li>Which vaccine would you like to receive? Choice: Moderna, Pfizer, AstraZeneca, Janssen</li>
-                                    <li>Have you had the vaccine? Answer accepted: Yes, No</li>
-                                    <li>Vaccine name Choice: Moderna, Pfizer, AstraZeneca, Janssen</li>
-                                    <li>Vaccine code: 24 character limit</li>
-                                </ul>
-                            </p>
-                            <h2 class="display-4 lh-1 mb-4">User account</h2>
-                            <p class="lead fw-normal text-muted mb-4">
-                                All volunteers and employees have a user account, which is used to log in to the 
-                                application.
-                                <ul class="lead fw-normal text-muted mb-4">
-                                    <li>Identification code: 9 digits</li>
-                                    <li>Password: Consists of at least 8 characters containing at least 1 number, 1 upper case, 1 lower case and 1 special character.</li>
-                                </ul>
-                            </p>
-                            <h2 class="display-4 lh-1 mb-4">Visitor</h2>
-                            <p class="lead fw-normal text-muted mb-4">
-                                During a first visit, the employee must create an account for the visitor that will be 
-                                linked to all his activities with VaxTodo. Once created, the account number is 
-                                communicated to the visitor and a confirmation email is sent with the account number.
-                                <ul class="lead fw-normal text-muted mb-4">
-                                    <li>Account number: 12 characters</li>
-                                    <li>First name: 50 character limit</li>
-                                    <li>Last name: 50 character limit</li>
-                                    <li>Date of birth Accepted format: YYYY-MM-DD</li>
-                                    <li>Email Address</li>
-                                    <li>Phone number: 10 digits</li>
-                                    <li>Address (number, street): 100 character limit</li>
-                                    <li>Postal Code: 6 characters</li>
-                                    <li>City: 50 characters limit</li>
-                                </ul>
-                            </p>
-                            <h3 class="display-6 lh-1 mb-4">Vaccination profile</h3>
-                            <p class="lead fw-normal text-muted mb-4">
-                                List of vaccinations received
-                                <ul class="lead fw-normal text-muted mb-4">
-                                    <li>Date of vaccination Accepted format: YYYY-MM-DD</li>
-                                    <li>Dose type: (1, 2)</li>
-                                    <li>Vaccine name: [Moderna, Pfizer, AstraZeneca, Janssen]</li>
-                                    <li>Vaccine code: 24 character limit</li>
-                                </ul>
-                            </p>
-                            <h2 class="display-4 lh-1 mb-4">Volunteer</h2>
-                            <p class="lead fw-normal text-muted mb-4">
-                                <ul class="lead fw-normal text-muted mb-4">
-                                    <li>Account number: 12 characters</li>
-                                    <li>First name: 50 character limit</li>
-                                    <li>Last name: 50 character limit</li>
-                                    <li>Date of birth Accepted format: YYYY-MM-DD</li>
-                                    <li>Email Address</li>
-                                    <li>Phone number: 10 digits</li>
-                                    <li>Address (number, street): 100 character limit</li>
-                                    <li>Postal Code: 6 characters</li>
-                                    <li>City: 50 character limit</li>
-                                </ul>
-                                <span class="lead fw-normal text-muted mb-4">
-                                    A volunteer also has a schedule listing the days he or she is available to come to the 
-                                    location.
-                                </span>
-                            </p>
                         </div>
                     </div>
                 </div>
             </div>
         </header>
+        <!-- Basic features section-->
+        <section class="bg-light" style="padding-top: 1rem !important;">
+            <div class="container px-5">
+                <div class="row gx-5 align-items-center justify-content-center justify-content-lg-between">
+                    <h2 class="display-4 lh-1 mb-4">Constraints</h2>
+                    <div>
+                        <ul class="lead fw-normal text-muted mb-4">
+                            <li>Calendar: No more than 15 entries/visits per time slot (8am, 9am, 10am...5pm).</li>
+                            <li>Schedule: Monday to Friday from 8am to 6pm.</li>
+                            <li>Appointments: Minimum 72 hours in advance and maximum 2 people.</li>
+                        </ul>
+                    </div>
+                    <h2 class="display-4 lh-1 mb-4">Visit</h2>
+                    <div class="lead fw-normal text-muted mb-4">
+                        When a person arrives at the reception desk, a volunteer checks to see if he or she 
+                        has an appointment, using his or her reservation number and validating his or her 
+                        name and appointment time in the system. If the person does not have an appointment 
+                        or is late, the volunteer checks the calendar for available times. The volunteer 
+                        confirms the period with the visitor and proceeds to add the visitor to the calendar 
+                        at the selected period by indicating his name and phone number. If a person who has 
+                        made an appointment arrives at the reception desk more than 15 minutes late, the 
+                        appointment is automatically cancelled by the system and the person is considered 
+                        a spontaneous visitor. The volunteer then proceeds to select an available period.
+                        <br>
+                        <br>
+                        When making the appointment, the employee uses the system to access the calendar 
+                        to choose a date and time with the person. When the person confirms the choice to 
+                        the employee, the employee makes the reservation and adds a scheduled visit to the 
+                        calendar. The appointment details are emailed to the visitor, who can use them during 
+                        their visit to confirm their appointment.
+                        <br>
+                        <br>
+                        <ul class="lead fw-normal text-muted mb-4">
+                            <li>Reservation number: 6 digits</li>
+                            <li>First name: 50 character limit</li>
+                            <li>Last name: 50 character limit</li>
+                            <li>Date of visit Accepted format: YYYY-MM-DD</li>
+                            <li>Time of visit Accepted format: HH:mm</li>
+                            <li>Dose type: (1, 2)</li>
+                        </ul>
+                    </div>
+                    <h2 class="display-4 lh-1 mb-4">Interview and Follow-Up</h2>
+                    <div class="lead fw-normal text-muted mb-4">
+                        During the interview with the employee, in the case of a scheduled visit, the employee 
+                        asks for his reservation number and confirms his visit in the system. In the case of a 
+                        spontaneous visit, the employee verifies that his name and phone number are present in 
+                        the calendar at the time of the visit. The employee then asks for his or her account 
+                        number to proceed with the questionnaire. If the visitor does not have his account 
+                        number, he can provide his email address and date of birth to find it.
+                        <br>
+                        <br>
+                        The employee asks for the visitor's health insurance card and completes a 
+                        questionnaire with the visitor in the system. If the visitor does not have a health 
+                        card or if it has expired, the visit is cancelled and the employee invites the visitor 
+                        to make a new appointment.
+                        <br>
+                        <br>
+                        In the case of a first dose, the employee asks the visitor if they would like to 
+                        schedule a second dose. If so, the employee proceeds to schedule the appointment. The 
+                        appointment must be made within a minimum of one month.
+                        <br>
+                        <br>
+                        The employee then prints and signs the form to be completed by a health care 
+                        professional. During the day, an employee collects the completed forms and completes 
+                        the visitor's vaccination profile. If the visitor has been vaccinated, an email is 
+                        sent to the visitor containing the proof of vaccination in the form of a PDF document. 
+                        The proof of vaccination contains the visitor's name, date of birth, a QR code and 
+                        their vaccination profile listing the vaccinations given. At the end of the day, the 
+                        employee retrieves the list of scheduled visits for the next 48 hours and sends an 
+                        email notification, reminding everyone of their upcoming appointment.
+                    </div>
+                    <h2 class="display-4 lh-1 mb-4">Form</h2>
+                    <div class="lead fw-normal text-muted mb-4">
+                        <ul class="lead fw-normal text-muted mb-4">
+                            <li>Account number: 12 digits</li>
+                            <li>First name: 50 character limit</li>
+                            <li>Last name: 50 character limit</li>
+                            <li>Date of birth Accepted format: YYYY-MM-DD</li>
+                            <li>Health insurance card number: Entered without spaces</li>
+                            <li>Have you ever received a first dose? Accepted answer: Yes, No</li>
+                            <li>Have you ever had COVID? Answer accepted: Yes, No</li>
+                            <li>Do you have any symptoms of COVID? Answer accepted: Yes, No</li>
+                            <li>Do you have any allergies? Answer accepted: Yes, No</li>
+                            <li>Which vaccine would you like to receive? Choice: Moderna, Pfizer, AstraZeneca, Janssen</li>
+                            <li>Have you had the vaccine? Answer accepted: Yes, No</li>
+                            <li>Vaccine name Choice: Moderna, Pfizer, AstraZeneca, Janssen</li>
+                            <li>Vaccine code: 24 character limit</li>
+                        </ul>
+                    </div>
+                    <h2 class="display-4 lh-1 mb-4">User account</h2>
+                    <div class="lead fw-normal text-muted mb-4">
+                        All volunteers and employees have a user account, which is used to log in to the 
+                        application.
+                        <br>
+                        <br>
+                        <ul class="lead fw-normal text-muted mb-4">
+                            <li>Identification code: 9 digits</li>
+                            <li>Password: Consists of at least 8 characters containing at least 1 number, 1 upper case, 1 lower case and 1 special character.</li>
+                        </ul>
+                    </div>
+                    <h2 class="display-4 lh-1 mb-4">Visitor</h2>
+                    <div class="lead fw-normal text-muted mb-4">
+                        During a first visit, the employee must create an account for the visitor that will be 
+                        linked to all his activities with VaxTodo. Once created, the account number is 
+                        communicated to the visitor and a confirmation email is sent with the account number.
+                        <br>
+                        <br>
+                        <ul class="lead fw-normal text-muted mb-4">
+                            <li>Account number: 12 characters</li>
+                            <li>First name: 50 character limit</li>
+                            <li>Last name: 50 character limit</li>
+                            <li>Date of birth Accepted format: YYYY-MM-DD</li>
+                            <li>Email Address</li>
+                            <li>Phone number: 10 digits</li>
+                            <li>Address (number, street): 100 character limit</li>
+                            <li>Postal Code: 6 characters</li>
+                            <li>City: 50 characters limit</li>
+                        </ul>
+                    </div>
+                    <h3 class="display-6 lh-1 mb-4">Vaccination profile</h3>
+                    <div class="lead fw-normal text-muted mb-4">
+                        List of vaccinations received.
+                        <br>
+                        <br>
+                        <ul class="lead fw-normal text-muted mb-4">
+                            <li>Date of vaccination Accepted format: YYYY-MM-DD</li>
+                            <li>Dose type: (1, 2)</li>
+                            <li>Vaccine name: [Moderna, Pfizer, AstraZeneca, Janssen]</li>
+                            <li>Vaccine code: 24 character limit</li>
+                        </ul>
+                    </div>
+                    <h2 class="display-4 lh-1 mb-4">Volunteer</h2>
+                    <div class="lead fw-normal text-muted mb-4">
+                        <ul class="lead fw-normal text-muted mb-4">
+                            <li>Account number: 12 characters</li>
+                            <li>First name: 50 character limit</li>
+                            <li>Last name: 50 character limit</li>
+                            <li>Date of birth Accepted format: YYYY-MM-DD</li>
+                            <li>Email Address</li>
+                            <li>Phone number: 10 digits</li>
+                            <li>Address (number, street): 100 character limit</li>
+                            <li>Postal Code: 6 characters</li>
+                            <li>City: 50 character limit</li>
+                        </ul>
+                        <span class="lead fw-normal text-muted mb-4">
+                            A volunteer also has a schedule listing the days he or she is available to come to the 
+                            location.
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </section>
         <!-- Footer-->
         <footer class="bg-black text-center py-5">
             <div class="container px-5">
@@ -199,7 +214,7 @@
                     <span class="mx-1">&middot;</span>
                     <a href="./specifications.html">Specifications</a>
                     <span class="mx-1">&middot;</span>
-                    <a href="./project_report_English_translation.html">Project Report</a>
+                    <a href="./report.html">Project Report</a>
                 </div>
             </div>
         </footer>
