@@ -1380,7 +1380,7 @@ progress {
   }
 
   .col-lg-6 {
-    flex: 0 0 auto;
+    flex: 1 0 auto;
     width: 50%;
   }
 
@@ -5356,7 +5356,7 @@ textarea.form-control-lg {
 
 .list-group-item-light {
   color: #636464;
-  background-color: #fff;
+  background-color: #fefefe;
 }
 .list-group-item-light.list-group-item-action:hover, .list-group-item-light.list-group-item-action:focus {
   color: #636464;
@@ -7416,7 +7416,7 @@ textarea.form-control-lg {
 }
 
 .p-3 {
-  padding: 0.7rem !important;
+  padding: 1rem !important;
 }
 
 .p-4 {
