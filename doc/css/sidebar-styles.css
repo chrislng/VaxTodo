@@ -68,3 +68,12 @@ body.sb-sidenav-toggled #wrapper #sidebar-wrapper {
     display: inline;
   }
 }
+
+/* Make navbar collapsible menu appear over table of contents collapsible menu */
+#navbarResponsive {
+  z-index: 10;
+}
+
+#wrapper {
+  z-index: 0;
+}
