@@ -1,7 +1,15 @@
 @charset "UTF-8";
 
+#navbarResponsive {
+  /* Make navbar collapsible menu appear over table of contents collapsible menu */
+  z-index: 10;
+}
+
 #wrapper {
     overflow-x: hidden;
+    /* Place #wrapper behind the body by default to allow interaction with the page elements. */
+    /* Its z-index will be modified from -1 to 0 and vice-versa upon toggle of #sidebarToggle in the javascript. */
+    z-index: -1;
   }
   
 #sidebar-wrapper {
@@ -67,13 +75,4 @@ body.sb-sidenav-toggled #wrapper #sidebar-wrapper {
   #navbar-report-sections-toggle-text {
     display: inline;
   }
-}
-
-/* Make navbar collapsible menu appear over table of contents collapsible menu */
-#navbarResponsive {
-  z-index: 10;
-}
-
-#wrapper {
-  z-index: 0;
 }
